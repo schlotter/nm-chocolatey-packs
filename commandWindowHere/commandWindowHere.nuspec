@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>commandWindowHere</id>
+    <version>1.0.2</version>
+    <title>Add Open Command Window Here as Administrator</title>
+    <authors>neutmute</authors>
+    <owners>neutmute</owners>
+    <projectUrl>https://gist.github.com/neutmute</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Install it and be awesome.</description>
+  </metadata>
+</package>
