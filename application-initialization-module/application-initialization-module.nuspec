@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>application-initialization-module</id>
+    <version>1.0</version>
+    <title>Application Initialization Module for IIS 7.5</title>
+    <authors>Microsoft</authors>
+    <owners>seventypercent</owners>
+	<licenseUrl>http://www.iis.net/terms-of-use</licenseUrl>
+    <projectUrl>http://www.iis.net/downloads/microsoft/application-initialization</projectUrl>
+	<packageSourceUrl>https://github.com/neutmute/chocolatey-packs</packageSourceUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>IIS Application Initialization for IIS 7.5 enables website administrators to improve the responsiveness of their Web sites by loading the Web applications before the first request arrives.</description>
+    <summary>Works with IIS 7.5</summary>
+    <tags>iis</tags>
+  </metadata>
+</package>
