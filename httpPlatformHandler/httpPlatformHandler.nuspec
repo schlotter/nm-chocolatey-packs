@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>httpPlatformHandler</id>
+    <version>1.2</version>
+    <title>Http Platform Handler</title>
+    <authors>Microsoft</authors>
+    <owners>seventypercent</owners>
+    <projectUrl>http://www.iis.net/downloads/microsoft/httpplatformhandler</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>The HttpPlatformHandler is an IIS Module which enables process management of HTTP Listeners and proxies requests to the process it manages.</description>
+    <summary>Works with: IIS 7.5, IIS 8, IIS 8.5, IIS 10</summary>
+    <tags>http platform handler admin</tags>
+  </metadata>
+</package>
