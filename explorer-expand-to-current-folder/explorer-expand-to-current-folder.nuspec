@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>explorer-expand-to-current-folder</id>
+    <version>1.0.1</version>
+    <title>Turn on 'Automatically Expand to Current Folder'</title>
+    <authors>neutmute</authors>
+    <owners>neutmute</owners>
+    <!-- projectUrl>https://github.com/neutmute/chocolatey-packs</projectUrl outercurve app gallery compat -->
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Turn 'Automatically Expand to Current Folder' on in File Explorer navigation pane</description>
+  </metadata>
+</package>

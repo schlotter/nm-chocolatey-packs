@@ -1,0 +1,1 @@
+reg import "$PSScriptRoot\Turn_On_Expand_to_Current_Folder_in_Navigation_Pane.reg"
