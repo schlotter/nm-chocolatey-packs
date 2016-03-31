@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>wintail</id>
+    <version>2002.7</version>
+    <title>WinTail</title>
+    <authors>Bare Metal Software</authors>
+    <owners>seventypercent</owners>
+    <projectUrl>http://www.baremetalsoft.com/wintail/</projectUrl>
+	<packageSourceUrl>https://github.com/neutmute/chocolatey-packs</packageSourceUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>WinTail allows you to view the last 64K of a growing text file in real time under Win32 operating systems. It's a bit like using the "tail -f" command under UNIX.</description>
+    <summary>Like using Unix's "tail -f"</summary>
+    <tags>tail</tags>	
+  </metadata>
+</package>
