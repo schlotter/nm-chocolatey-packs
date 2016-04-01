@@ -6,7 +6,7 @@
     <title>Turn on 'Automatically Expand to Current Folder'</title>
     <authors>neutmute</authors>
     <owners>neutmute</owners>
-    <!-- projectUrl>https://github.com/neutmute/chocolatey-packs</projectUrl outercurve app gallery compat -->
+    <projectUrl>https://github.com/neutmute/chocolatey-packs</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Turn 'Automatically Expand to Current Folder' on in File Explorer navigation pane</description>
   </metadata>

@@ -6,7 +6,7 @@
     <title>Set Taskbar buttons: Never combine</title>
     <authors>neutmute</authors>
     <owners>neutmute</owners>
-    <!-- projectUrl>https://github.com/neutmute/chocolatey-packs</projectUrl outercurve app gallery compat -->
+    <projectUrl>https://github.com/neutmute/chocolatey-packs</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>For those with a religious hatred for combined task bar buttons</description>
   </metadata>
