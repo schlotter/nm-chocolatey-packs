@@ -1,0 +1,1 @@
+reg import "$PSScriptRoot\Show_All_Folders_Navigation_Pane.reg"

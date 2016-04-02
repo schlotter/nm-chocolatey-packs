@@ -1,2 +1,2 @@
 # Chocolatey Packs #
-Some handy chocolatey packages for setting up a machine
+A collection of chocolatey packages for setting up a fresh machine 

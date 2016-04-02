@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>explorer-show-all-folders</id>
+    <version>1.0.0</version>
+    <title>Show all folders in the explorer tree automatically</title>
+    <authors>seventypercent</authors>
+    <owners>seventypercent</owners>
+    <projectUrl>https://github.com/neutmute/chocolatey-packs</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Set the Windows Navigation pane to Show all folders in the Folder Tree automatically</description>
+  </metadata>
+</package>
