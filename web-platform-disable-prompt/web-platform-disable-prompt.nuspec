@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>web-platform-disable-prompt</id>
+    <version>1.0.0.0</version>
+    <title>Disable first run Microsoft Web Platform prompt</title>
+    <authors>seventypercent</authors>
+    <owners>seventypercent</owners>
+    <projectUrl>https://github.com/neutmute/chocolatey-packs</projectUrl>
+    <description>Disable the "Do you want to get started with Microsoft Web Platform to stay connected with latest Web Platform Components?" prompt. See http://serverfault.com/questions/767464</description>
+    <summary>Disable Microsoft Web Platform prompt on first run of inetmgr.exe</summary>
+    <releaseNotes></releaseNotes>
+    <dependencies>
+      <dependency id="autohotkey.portable" />
+    </dependencies>
+  </metadata>
+</package>
