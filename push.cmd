@@ -1,0 +1,1 @@
+powershell -f push.ps1
