@@ -11,7 +11,7 @@ PS> Get-PackageSource -Provider chocolatey
 
 #>
 
-$packageNamesToIgnore = @("agent-ransack");
+$packageNamesToIgnore = @("agent-ransack", "application-initialization-module");
 $artifactsFolder = "$PSScriptRoot/.artifacts"
 
 $packages = Get-ChildItem "$artifactsFolder" -Filter *.nupkg
@@ -32,18 +32,11 @@ foreach($package in $packages)
     Write-Host "$package parsed as '$packageName', '$packageVersion'"
 
     $publishedVersion = (Find-Package -name "$packageName" -provider Chocolatey -RequiredVersion "$packageVersion").Version
-
-    Write-Host "$packageName is published at $publishedVersion"
-
+    
     if ($publishedVersion -eq $null)
     {
-        Write-Host "We need to push"
-        #choco push "$artifactsFolder\$package.Name"
-    }
-
-    if (($publishedVersion -ne $null) -and ($packageVersion > $publishedVersion))
-    {
-        Write-Host "!!!!!!!!!!!!!!!!!!!!! PUSH"
+        Write-Host "@@@@@ Chocolatey package not found, we need to push $packageName..."
+        &choco push "$artifactsFolder\$package"
     }
 
 }
