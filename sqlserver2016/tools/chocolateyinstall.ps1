@@ -13,6 +13,7 @@ $ErrorActionPreference = 'Stop';
 
 $toolsDir = Split-Path -parent $PSCommandPath
 $configFile = "$toolsDir\configuration.ini"
+$thisUser = [System.Security.Principal.WindowsIdentity]::GetCurrent().Name
 
 Write-Host "Configuration file is $configFile"
 remove-item -path "$configFile" -Force -ErrorAction SilentlyContinue
@@ -34,10 +35,9 @@ if (!(Test-Path env:\choco:sqlserver2016:ACTION)){$env:choco:sqlserver2016:ACTIO
 if (!(Test-Path env:\choco:sqlserver2016:IACCEPTSQLSERVERLICENSETERMS)){$env:choco:sqlserver2016:IACCEPTSQLSERVERLICENSETERMS="TRUE"}
 if (!(Test-Path env:\choco:sqlserver2016:FEATURES)){$env:choco:sqlserver2016:FEATURES="SQLENGINE"}
 if (!(Test-Path env:\choco:sqlserver2016:INSTANCENAME)){$env:choco:sqlserver2016:INSTANCENAME="MSSQLSERVER "}
-if (!(Test-Path env:\choco:sqlserver2016:PID)){$env:choco:sqlserver2016:PID="Developer"}
 if (!(Test-Path env:\choco:sqlserver2016:Q)){$env:choco:sqlserver2016:Q="TRUE"}
-if (!(Test-Path env:\choco:sqlserver2016:ADDCURRENTUSERASSQLADMIN)){$env:choco:sqlserver2016:ADDCURRENTUSERASSQLADMIN="TRUE"}
 if (!(Test-Path env:\choco:sqlserver2016:SQLSVCACCOUNT)){$env:choco:sqlserver2016:SQLSVCACCOUNT="NT Service\MSSQLSERVER"}
+if (!(Test-Path env:\choco:sqlserver2016:SQLSYSADMINACCOUNTS)){$env:choco:sqlserver2016:SQLSYSADMINACCOUNTS="$thisUser"}
 
 
 if (Test-Path env:\choco:sqlserver2016:ACTION){Add-Content $configFile "ACTION=`"$env:choco:sqlserver2016:ACTION`""}
@@ -124,10 +124,9 @@ if (Test-Path env:\choco:sqlserver2016:RSSVCStartupType){Add-Content $configFile
 
 $chocoSqlserver2016IsoPath="D:\Downloads\en_sql_server_2016_rc_2_x64_dvd_8509698.iso"
 
-$mountedIso=Mount-DiskImage -PassThru "$chocoSqlserver2016IsoPath"
-$isoDrive = Get-Volume -DiskImage $mountedIso | Select -expand DriveLetter
+#$mountedIso=Mount-DiskImage -PassThru "$chocoSqlserver2016IsoPath"
+#$isoDrive = Get-Volume -DiskImage $mountedIso | Select -expand DriveLetter
 
+#& "$isoDrive`:\setup.exe" "/ConfigurationFile=$configFile" > "$toolsDir\..\setup.log"
 
-&"$isoDrive\setup.exe" /ConfigurationFile=$configFile
-
-Dismount-DiskImage -ImagePath $chocoSqlserver2016IsoPath
+#Dismount-DiskImage -ImagePath $chocoSqlserver2016IsoPath

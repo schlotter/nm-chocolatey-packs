@@ -1,2 +1,4 @@
 *.nupkg
 sqlserver2016/tools/configuration.ini
+sqlserver2016/docs/ConfigurationFile - Copy.ini
+sqlserver2016/setup.log
