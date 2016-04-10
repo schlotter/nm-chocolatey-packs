@@ -34,8 +34,12 @@ function BuildConfigurationFile()
     if (!(Test-Path env:\choco:sqlserver2016:Q)){$env:choco:sqlserver2016:Q="TRUE"}
     if (!(Test-Path env:\choco:sqlserver2016:SQLSVCACCOUNT)){$env:choco:sqlserver2016:SQLSVCACCOUNT="NT Service\MSSQLSERVER"}
     if (!(Test-Path env:\choco:sqlserver2016:SQLSYSADMINACCOUNTS)){$env:choco:sqlserver2016:SQLSYSADMINACCOUNTS="$thisUser"}
+    if (!(Test-Path env:\choco:sqlserver2016:SUPPRESSPRIVACYSTATEMENTNOTICE)){$env:choco:sqlserver2016:SUPPRESSPRIVACYSTATEMENTNOTICE="TRUE"}
+
+
 
     # Write config to file
+    if (Test-Path env:\choco:sqlserver2016:SUPPRESSPRIVACYSTATEMENTNOTICE){Add-Content $configFile "SUPPRESSPRIVACYSTATEMENTNOTICE=`"$env:choco:sqlserver2016:SUPPRESSPRIVACYSTATEMENTNOTICE`""}
     if (Test-Path env:\choco:sqlserver2016:ACTION){Add-Content $configFile "ACTION=`"$env:choco:sqlserver2016:ACTION`""}
     if (Test-Path env:\choco:sqlserver2016:IACCEPTSQLSERVERLICENSETERMS){Add-Content $configFile "IACCEPTSQLSERVERLICENSETERMS=`"$env:choco:sqlserver2016:IACCEPTSQLSERVERLICENSETERMS`""}
     if (Test-Path env:\choco:sqlserver2016:ENU){Add-Content $configFile "ENU=`"$env:choco:sqlserver2016:ENU`""}
@@ -127,6 +131,12 @@ $chocoSqlserver2016IsoPath="D:\Downloads\en_sql_server_2016_rc_2_x64_dvd_8509698
 $mountedIso=Mount-DiskImage -PassThru "$chocoSqlserver2016IsoPath"
 $isoDrive = Get-Volume -DiskImage $mountedIso | Select -expand DriveLetter
 
-$output = & "$isoDrive`:\setup.exe" "/ConfigurationFile=$configFile" | Write-Output
+$output = & "$isoDrive`:\setup.exe" "/ConfigurationFile=$configFile"
+
+$sqlSetupErrorlevel = $LASTEXITCODE
+Write-Host "error=$sqlSetupErrorlevel"
+Write-Host $output
 
 Dismount-DiskImage -ImagePath $chocoSqlserver2016IsoPath
+
+exit $sqlSetupErrorlevel
