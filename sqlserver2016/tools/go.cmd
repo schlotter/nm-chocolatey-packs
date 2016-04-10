@@ -1,0 +1,1 @@
+f:\setup /configurationfile=configuration.ini
