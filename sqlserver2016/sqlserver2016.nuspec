@@ -10,7 +10,7 @@
 	<packageSourceUrl>https://github.com/neutmute/chocolatey-packs</packageSourceUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>The package is intended to allow quick setup of developer builds for SQL Server 2016</description>
-    <summary>SQL Server 2016 - </summary>
+    <summary>SQL Server 2016</summary>
     <tags></tags>
   </metadata>
 </package>

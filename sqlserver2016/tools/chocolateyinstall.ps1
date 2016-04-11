@@ -1,24 +1,11 @@
 ﻿# stop on all errors
 $ErrorActionPreference = 'Stop';
 
-
-#
-#$packageName = 'HttpPlatformHandler' 
-#$registryUninstallerKeyName = 'HttpPlatformHandler' 
-#$installerType = 'msi' 
-#$url = 'http://go.microsoft.com/fwlink/?LinkId=690722' 
-#$url64 = 'http://go.microsoft.com/fwlink/?LinkId=690721'
-#$silentArgs = '/quiet' 
-#$validExitCodes = @(0) 
-
-
 $toolsDir = Split-Path -parent $PSCommandPath
 $configFile = "$toolsDir\configuration.ini"
 $thisUser = [System.Security.Principal.WindowsIdentity]::GetCurrent().Name
 
 Write-Host "Configuration file is $configFile"
-
-$env:choco:sqlserver2016:INSTALLSQLDATADIR="D:\Data\Sql"
 
 function BuildConfigurationFile()
 {
@@ -35,9 +22,7 @@ function BuildConfigurationFile()
     if (!(Test-Path env:\choco:sqlserver2016:SQLSVCACCOUNT)){$env:choco:sqlserver2016:SQLSVCACCOUNT="NT Service\MSSQLSERVER"}
     if (!(Test-Path env:\choco:sqlserver2016:SQLSYSADMINACCOUNTS)){$env:choco:sqlserver2016:SQLSYSADMINACCOUNTS="$thisUser"}
     if (!(Test-Path env:\choco:sqlserver2016:SUPPRESSPRIVACYSTATEMENTNOTICE)){$env:choco:sqlserver2016:SUPPRESSPRIVACYSTATEMENTNOTICE="TRUE"}
-
-
-
+    
     # Write config to file
     if (Test-Path env:\choco:sqlserver2016:SUPPRESSPRIVACYSTATEMENTNOTICE){Add-Content $configFile "SUPPRESSPRIVACYSTATEMENTNOTICE=`"$env:choco:sqlserver2016:SUPPRESSPRIVACYSTATEMENTNOTICE`""}
     if (Test-Path env:\choco:sqlserver2016:ACTION){Add-Content $configFile "ACTION=`"$env:choco:sqlserver2016:ACTION`""}
@@ -123,20 +108,11 @@ function BuildConfigurationFile()
 
 }
 
+BuildConfigurationFile
 
-
-#BuildConfigurationFile
-$chocoSqlserver2016IsoPath="D:\Downloads\en_sql_server_2016_rc_2_x64_dvd_8509698.iso"
-
-$mountedIso=Mount-DiskImage -PassThru "$chocoSqlserver2016IsoPath"
+$mountedIso = Mount-DiskImage -PassThru "$env:choco:sqlserver2016:isoImage"
 $isoDrive = Get-Volume -DiskImage $mountedIso | Select -expand DriveLetter
 
-$output = & "$isoDrive`:\setup.exe" "/ConfigurationFile=$configFile"
-
-$sqlSetupErrorlevel = $LASTEXITCODE
-Write-Host "error=$sqlSetupErrorlevel"
-Write-Host $output
+Install-ChocolateyPackage 'sqlserver2016' 'exe' '/ConfigurationFile=$configFile' '$isoDrive:\setup.exe' -validExitCodes @(0)
 
 Dismount-DiskImage -ImagePath $chocoSqlserver2016IsoPath
-
-exit $sqlSetupErrorlevel
