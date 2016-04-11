@@ -1,15 +1,16 @@
 <?xml version="1.0"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>sqlserver2016</id>
+    <id>sqlserver2012</id>
     <version>13.00.1300.275-prerelease</version>
     <title>SQL Server 2016</title>
     <authors>Microsoft</authors>
     <owners>seventypercent</owners>
     <projectUrl>https://www.microsoft.com/en-au/server-cloud/products/sql-server-2016/</projectUrl>
+	<packageSourceUrl>https://github.com/neutmute/chocolatey-packs</packageSourceUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>The package is intended to allow quick setup of developer builds for SQL Server 2016</description>
     <summary>SQL Server 2016</summary>
-    <packageSourceUrl>https://github.com/neutmute/chocolatey-packs</packageSourceUrl>
+    <tags></tags>
   </metadata>
 </package>

@@ -14,3 +14,17 @@ Result facility code: 1203
 Result error code: 2
 
 Please review the summary.txt log for further details
+
+
+ Microsoft .NET Framework CasPol 4.0.30319.33440 for Microsoft .NET Framework version 4.0.30319.33440 Copyright (C) Micr
+osoft Corporation.  All rights reserved.  WARNING: The .NET Framework does not apply CAS policy by default. Any settings
+  shown or modified by CasPol will only affect applications that opt into using  CAS policy.   Please see http://go.micr
+osoft.com/fwlink/?LinkId=131738 for more information.    Success Microsoft .NET Framework CasPol 4.0.30319.33440 for Mic
+rosoft .NET Framework version 4.0.30319.33440 Copyright (C) Microsoft Corporation.  All rights reserved.  WARNING: The .
+NET Framework does not apply CAS policy by default. Any settings  shown or modified by CasPol will only affect applicati
+ons that opt into using  CAS policy.   Please see http://go.microsoft.com/fwlink/?LinkId=131738 for more information.
+ Success SQL Server 2016 RC2 transmits information about your installation experience, as well as other usage and perfor
+mance data, to Microsoft. To learn more about SQL Server 2016 RC2 data processing and privacy controls, please see the P
+rivacy Statement. Microsoft (R) SQL Server 2016 RC2 13.00.1300.275  Copyright (c) 2016 Microsoft Corporation.  All right
+s reserved.
+ Dismounting ISO

@@ -12,7 +12,11 @@ function BuildConfigurationFile()
     remove-item -path "$configFile" -Force -ErrorAction SilentlyContinue
     
     Add-Content $configFile "[OPTIONS]"
-
+	
+	##
+    ## Below generated from https://github.com/neutmute/chocolatey-packs/raw/master/sqlserver2016/docs/sql2016_ParamGenerator.xlsx
+	##
+	
     # If user didn't supply some basic requirements, set them
     if (!(Test-Path env:\choco:sqlserver2016:ACTION)){$env:choco:sqlserver2016:ACTION="Install"}
     if (!(Test-Path env:\choco:sqlserver2016:IACCEPTSQLSERVERLICENSETERMS)){$env:choco:sqlserver2016:IACCEPTSQLSERVERLICENSETERMS="TRUE"}
@@ -112,7 +116,14 @@ BuildConfigurationFile
 
 $mountedIso = Mount-DiskImage -PassThru "$env:choco:sqlserver2016:isoImage"
 $isoDrive = Get-Volume -DiskImage $mountedIso | Select -expand DriveLetter
+Write-Host "Mounted ISO to $isoDrive"
 
-Install-ChocolateyPackage 'sqlserver2016' 'exe' '/ConfigurationFile=$configFile' '$isoDrive:\setup.exe' -validExitCodes @(0)
+$output = & "$isoDrive`:\setup.exe" "/ConfigurationFile=$configFile"
 
-Dismount-DiskImage -ImagePath $chocoSqlserver2016IsoPath
+$sqlSetupErrorlevel = $LASTEXITCODE
+Write-Host "setup error level=$sqlSetupErrorlevel"
+Write-Host $output
+
+Write-Host "Dismounting ISO"
+Dismount-DiskImage -ImagePath $env:choco:sqlserver2016:isoImage
+exit $sqlSetupErrorlevel
