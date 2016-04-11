@@ -13,7 +13,4 @@
     <summary>SQL Server 2016</summary>
     <tags></tags>
   </metadata>
-  <files>
-    <file src="**" exclude="Docs\*" />
-  </files>
 </package>
