@@ -14,6 +14,6 @@
     <tags></tags>
   </metadata>
   <files>
-    <file src="**" exclude="Docs\*" />
+    <file src="**" exclude="Docs\*;readme.md;tools\configuration.ini" />
   </files>
 </package>

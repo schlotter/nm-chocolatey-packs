@@ -34,16 +34,7 @@ Uses Autohotkey to disable annoying inetmgr dialog
 Simple tail utility with shortcut added to `Send To` menu
 
 #### sqlserver2016
-Silent installs of SQL Server 2016. Uses environment variables to configure.
-Minimum requirement is a local path to the ISO image (not publicly available at time of writing)
-See `chocolateyinstall.ps1` for all environment vars which mirror those in the [documentation](https://msdn.microsoft.com/en-us/library/ms144259.aspx)
-
-** Cannot install developer edition due to limits in the setup.exe params from Microsoft
-
-######Example install
-	$env:choco:sqlserver2016:isoImage="D:\Downloads\en_sql_server_2016_rc_2_x64_dvd_8509698.iso"
-	$env:choco:sqlserver2016:INSTALLSQLDATADIR="C:\Data\Sql"
-	choco install sqlserver2016
+See readme.md in package folder
 
 
 
