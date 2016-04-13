@@ -1,0 +1,5 @@
+ The following error occurred: A computer restart is required. You must restart
+this computer before installing SQL Server.  Error result: -2067919934 Result fa
+cility code: 1214 Result error code: 3010  Please review the summary.txt log for
+ further details Microsoft (R) SQL Server 2012 11.00.6020.00  Copyright (c) Micr
+osoft Corporation.  All rights reserved.
