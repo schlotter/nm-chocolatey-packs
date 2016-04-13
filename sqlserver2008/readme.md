@@ -9,27 +9,15 @@ See `chocolateyinstall.ps1` for all environment vars which mirror those in the [
 Execute this from elevated PowerShell to install to an instance named `SQL2008` with sql management studio and a custom collation:
 
 	#mandatory param
-	$env:choco:sqlserver2008:isoImage="D:\Downloads\en_sql_server_2008_developer_edition_with_service_pack_3_x86_dvd_7286785.iso"
+	$env:choco:sqlserver2008:isoImage="D:\Downloads\en_sql_server_2008_r2_developer_x86_x64_ia64_dvd_522665.iso"
 	
 	#optional params
-	$env:choco:sqlserver2008:INSTALLSQLDATADIR="C:\Data\Sql\sql2008"
 	$env:choco:sqlserver2008:INSTANCEID="sql2008"
-	$env:choco:sqlserver2008:INSTANCENAME="sql2008"
-	$env:choco:sqlserver2008:FEATURES="SQLENGINE,SSMS,ADV_SSMS"
-	$env:choco:sqlserver2008:AGTSVCACCOUNT="NT Service\SQLAgent`$SQL2008"
-	$env:choco:sqlserver2008:SQLSVCACCOUNT="NT Service\MSSQL`$SQL2008"
+	$env:choco:sqlserver2008:INSTANCENAME="SQL2008"
+	$env:choco:sqlserver2008:AGTSVCACCOUNT="NT AUTHORITY\SYSTEM"
 	$env:choco:sqlserver2008:SQLCOLLATION="SQL_Latin1_General_CP1_CI_AS"
+	$env:choco:sqlserver2008:SQLSVCACCOUNT="NT AUTHORITY\SYSTEM"
+	$env:choco:sqlserver2008:INSTALLSQLDATADIR="D:\data\sql"
 
 	choco install sqlserver2008
-
-
-
-
-
-
-
-
-
-
-
 

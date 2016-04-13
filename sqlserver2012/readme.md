@@ -12,7 +12,7 @@ Execute this from elevated PowerShell to install to an instance named `SQL2012` 
 	$env:choco:sqlserver2012:isoImage="D:\Downloads\en_sql_server_2012_developer_edition_with_service_pack_3_x86_dvd_7286785.iso"
 	
 	#optional params
-	$env:choco:sqlserver2012:INSTALLSQLDATADIR="C:\Data\Sql\sql2012"
+	$env:choco:sqlserver2012:INSTALLSQLDATADIR="D:\Data\Sql"
 	$env:choco:sqlserver2012:INSTANCEID="sql2012"
 	$env:choco:sqlserver2012:INSTANCENAME="sql2012"
 	$env:choco:sqlserver2012:FEATURES="SQLENGINE,SSMS,ADV_SSMS"
