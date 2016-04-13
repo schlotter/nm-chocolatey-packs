@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>sqlstudio</id>
+    <version>13.0.13000.55</version>
+    <title>SQL Server Management Studio</title>
+    <authors>Microsoft</authors>
+    <owners>seventypercent</owners>
+    <projectUrl>https://msdn.microsoft.com/en-us/library/mt238290.aspx</projectUrl>
+	<packageSourceUrl>https://github.com/neutmute/chocolatey-packs</packageSourceUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>SQL Server Management Studio (SSMS) is an integrated environment for accessing, configuring, managing, administering, and developing all components of SQL Server</description>
+    <summary>SQL Server Management Studio (SSMS)</summary>
+    <tags></tags>
+  </metadata>
+  <files>
+    <file src="**" exclude="Docs\*;readme.md" />
+  </files>
+</package>
