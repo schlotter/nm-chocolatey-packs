@@ -22,7 +22,6 @@ function BuildConfigurationFile()
 	if (!(Test-Path env:\choco:sqlserver2012:FEATURES)){$env:choco:sqlserver2012:FEATURES="SQLENGINE"}
 	if (!(Test-Path env:\choco:sqlserver2012:IACCEPTSQLSERVERLICENSETERMS)){$env:choco:sqlserver2012:IACCEPTSQLSERVERLICENSETERMS="TRUE"}
 	if (!(Test-Path env:\choco:sqlserver2012:Q)){$env:choco:sqlserver2012:Q="TRUE"}
-	if (!(Test-Path env:\choco:sqlserver2012:ADDCURRENTUSERASSQLADMIN)){$env:choco:sqlserver2012:ADDCURRENTUSERASSQLADMIN="TRUE"}
 	if (!(Test-Path env:\choco:sqlserver2012:SQLSVCACCOUNT)){$env:choco:sqlserver2012:SQLSVCACCOUNT="NT Service\MSSQLSERVER"}
 	if (!(Test-Path env:\choco:sqlserver2012:SQLSYSADMINACCOUNTS)){$env:choco:sqlserver2012:SQLSYSADMINACCOUNTS="$thisUser"}  
     
