@@ -6,7 +6,7 @@
     <title>Disable first run Microsoft Web Platform prompt</title>
     <authors>seventypercent</authors>
     <owners>seventypercent</owners>
-    <projectUrl>https://github.com/neutmute/chocolatey-packs</projectUrl>
+    <projectUrl>https://github.com/neutmute/nm-chocolatey-packs</projectUrl>
     <description>Disable the "Do you want to get started with Microsoft Web Platform to stay connected with latest Web Platform Components?" prompt. See http://serverfault.com/questions/767464</description>
     <summary>Disable Microsoft Web Platform prompt on first run of inetmgr.exe</summary>
     <releaseNotes></releaseNotes>

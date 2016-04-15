@@ -7,7 +7,7 @@
     <authors>Microsoft</authors>
     <owners>seventypercent</owners>
     <projectUrl>https://msdn.microsoft.com/en-us/library/mt238290.aspx</projectUrl>
-	<packageSourceUrl>https://github.com/neutmute/chocolatey-packs</packageSourceUrl>
+	<packageSourceUrl>https://github.com/neutmute/nm-chocolatey-packs</packageSourceUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>SQL Server Management Studio (SSMS) is an integrated environment for accessing, configuring, managing, administering, and developing all components of SQL Server</description>
     <summary>SQL Server Management Studio (SSMS)</summary>

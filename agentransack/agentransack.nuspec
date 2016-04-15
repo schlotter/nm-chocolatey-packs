@@ -8,7 +8,7 @@
     <owners>seventypercent</owners>
     <licenseUrl>http://www.mythicsoft.com/info/aboutus</licenseUrl>
     <projectUrl>http://www.mythicsoft.com/agentransack</projectUrl>
-	<packageSourceUrl>https://github.com/neutmute/chocolatey-packs</packageSourceUrl>
+	<packageSourceUrl>https://github.com/neutmute/nm-chocolatey-packs</packageSourceUrl>
     <iconUrl>http://image.mythicsoft.com/agentransack/agent_ransack_128.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Agent Ransack is a free 'lite' version of FileLocator Pro. It is free for both personal and commercial use.</description>

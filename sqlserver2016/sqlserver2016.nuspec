@@ -7,12 +7,12 @@
     <authors>Microsoft</authors>
     <owners>seventypercent</owners>
     <projectUrl>https://www.microsoft.com/en-au/server-cloud/products/sql-server-2016/</projectUrl>
-	<packageSourceUrl>https://github.com/neutmute/chocolatey-packs/tree/master/sqlserver2016</packageSourceUrl>
+	<packageSourceUrl>https://github.com/neutmute/nm-chocolatey-packs/tree/master/sqlserver2016</packageSourceUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Bootstrap SQL Server 2016 installations.
 	
 	See readme.md for more usage:	
-	https://github.com/neutmute/chocolatey-packs/tree/master/sqlserver2016
+	https://github.com/neutmute/nm-chocolatey-packs/tree/master/sqlserver2016
 	</description>
     <summary>SQL Server 2016</summary>
     <tags></tags>

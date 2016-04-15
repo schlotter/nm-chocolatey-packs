@@ -7,7 +7,7 @@
     <authors>Microsoft</authors>
     <owners>seventypercent</owners>
     <projectUrl>http://www.iis.net/downloads/microsoft/httpplatformhandler</projectUrl>
-	<packageSourceUrl>https://github.com/neutmute/chocolatey-packs</packageSourceUrl>
+	<packageSourceUrl>https://github.com/neutmute/nm-chocolatey-packs</packageSourceUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>The HttpPlatformHandler is an IIS Module which enables process management of HTTP Listeners and proxies requests to the process it manages.</description>
     <summary>Works with: IIS 7.5, IIS 8, IIS 8.5, IIS 10</summary>

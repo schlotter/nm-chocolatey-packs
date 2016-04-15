@@ -6,7 +6,7 @@
     <title>Add Open Command Window Here as Administrator</title>
     <authors>neutmute</authors>
     <owners>neutmute</owners>
-    <projectUrl>https://github.com/neutmute/chocolatey-packs</projectUrl>
+    <projectUrl>https://github.com/neutmute/nm-chocolatey-packs</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Add elevated Open Command Window Here context menu to Windows Explorer</description>
   </metadata>

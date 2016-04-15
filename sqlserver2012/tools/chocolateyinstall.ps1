@@ -14,7 +14,7 @@ function BuildConfigurationFile()
     Add-Content $configFile "[OPTIONS]"
 
 	##
-    ## Below generated from https://github.com/neutmute/chocolatey-packs/raw/master/sqlserver2012/docs/sql2012_ParamGenerator.xlsx
+    ## Below generated from https://github.com/neutmute/nm-chocolatey-packs/raw/master/sqlserver2012/docs/sql2012_ParamGenerator.xlsx
 	##
 	
     # If user didn't supply some basic requirements, set them

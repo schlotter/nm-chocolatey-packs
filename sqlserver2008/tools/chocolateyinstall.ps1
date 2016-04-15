@@ -14,7 +14,7 @@ function BuildConfigurationFile()
     Add-Content $configFile "[SQLSERVER2008]"
 
 	##
-    ## Below generated from https://github.com/neutmute/chocolatey-packs/raw/master/sqlserver2008/docs/sql2008_ParamGenerator.xlsx
+    ## Below generated from https://github.com/neutmute/nm-chocolatey-packs/raw/master/sqlserver2008/docs/sql2008_ParamGenerator.xlsx
 	##
 	
     # If user didn't supply some basic requirements, set them

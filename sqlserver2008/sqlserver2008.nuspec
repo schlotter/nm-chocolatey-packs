@@ -7,7 +7,7 @@
     <authors>Microsoft</authors>
     <owners>seventypercent</owners>
     <projectUrl>https://www.microsoft.com/en-us/server-cloud/products/sql-server-editions/overview.aspx/</projectUrl>
-	<packageSourceUrl>https://github.com/neutmute/chocolatey-packs</packageSourceUrl>
+	<packageSourceUrl>https://github.com/neutmute/nm-chocolatey-packs</packageSourceUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>The package is intended to allow quick setup of developer builds for SQL Server 2008</description>
     <summary>SQL Server 2008</summary>
