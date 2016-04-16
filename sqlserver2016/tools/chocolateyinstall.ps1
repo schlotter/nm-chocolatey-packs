@@ -26,7 +26,8 @@ function BuildConfigurationFile()
     if (!(Test-Path env:\choco:sqlserver2016:SQLSVCACCOUNT)){$env:choco:sqlserver2016:SQLSVCACCOUNT="NT Service\MSSQLSERVER"}
     if (!(Test-Path env:\choco:sqlserver2016:SQLSYSADMINACCOUNTS)){$env:choco:sqlserver2016:SQLSYSADMINACCOUNTS="$thisUser"}
     if (!(Test-Path env:\choco:sqlserver2016:SUPPRESSPRIVACYSTATEMENTNOTICE)){$env:choco:sqlserver2016:SUPPRESSPRIVACYSTATEMENTNOTICE="TRUE"}
-    
+	if (!(Test-Path env:\choco:sqlserver2016:PID)){$env:choco:sqlserver2016:PID="22222-00000-00000-00000-00000"} # developer edition https://connect.microsoft.com/SQLServer/feedback/details/2576662/sql-server-2016-specify-developer-edition-from-command-line-parameter-or-configuration-file-install
+
     # Write config to file
     if (Test-Path env:\choco:sqlserver2016:SUPPRESSPRIVACYSTATEMENTNOTICE){Add-Content $configFile "SUPPRESSPRIVACYSTATEMENTNOTICE=`"$env:choco:sqlserver2016:SUPPRESSPRIVACYSTATEMENTNOTICE`""}
     if (Test-Path env:\choco:sqlserver2016:ACTION){Add-Content $configFile "ACTION=`"$env:choco:sqlserver2016:ACTION`""}
@@ -123,6 +124,11 @@ $output = & "$isoDrive`:\setup.exe" "/ConfigurationFile=$configFile"
 $sqlSetupErrorlevel = $LASTEXITCODE
 Write-Host "setup error level=$sqlSetupErrorlevel"
 Write-Host $output
+
+if ($sqlSetupErrorlevel -ne 0)
+{
+	Write-Error "SQL setup.exe exited with errorlevel $sqlSetupErrorlevel"
+}
 
 Write-Host "Dismounting ISO"
 Dismount-DiskImage -ImagePath $env:choco:sqlserver2016:isoImage

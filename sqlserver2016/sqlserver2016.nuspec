@@ -13,6 +13,9 @@
 	
 	See readme.md for more usage:	
 	https://github.com/neutmute/nm-chocolatey-packs/tree/master/sqlserver2016
+	
+	*Prerequisites*
+	KB-2919355 (https://support.microsoft.com/en-au/kb/2919355) for applicable operating systems
 	</description>
     <summary>SQL Server 2016</summary>
     <tags></tags>

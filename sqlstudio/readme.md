@@ -10,14 +10,5 @@ From elevated PowerShell:
 	# required
 	choco install sqlstudio
 
-
-
-
-
-
-
-
-
-
-
-
+##Prerequisites
+[KB2919355](https://support.microsoft.com/en-au/kb/2919355) for applicable operating systems

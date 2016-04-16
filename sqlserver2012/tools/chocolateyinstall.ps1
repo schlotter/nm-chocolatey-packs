@@ -111,6 +111,11 @@ $sqlSetupErrorlevel = $LASTEXITCODE
 Write-Host "setup error level=$sqlSetupErrorlevel"
 Write-Host $output
 
+if ($sqlSetupErrorlevel -ne 0)
+{
+	Write-Error "SQL setup.exe exited with errorlevel $sqlSetupErrorlevel"
+}
+
 Write-Host "Dismounting ISO"
 Dismount-DiskImage -ImagePath $env:choco:sqlserver2012:isoImage
 exit $sqlSetupErrorlevel
