@@ -5,6 +5,11 @@ A collection of [chocolatey](https://chocolatey.org/) packages
 
 `Push.ps1` Queries Chocolatey for the latest published version and pushes any packages that are not up to date
 
+##SQL Server Packages
+The SQL Server chocolatey packages were rejected from chocolatey.org since they cannot run without a user specified path to an ISO image. They are available from a public myget feed: [https://www.myget.org/F/nm-chocolatey-packs/api/v2](https://www.myget.org/F/nm-chocolatey-packs/api/v2)
+
+See my [boxstarter script](https://github.com/neutmute/nm-boxstarter/blob/master/base-box.ps1) for example code on how to execute them as well as the package `readme.md` files
+
 ##Packages
 #### agentransack
 Silent install achieved via auto hot keys
