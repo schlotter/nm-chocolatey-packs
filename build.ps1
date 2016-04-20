@@ -3,7 +3,7 @@ Write-Host "-=Build all chocolatey packs=-"
 $nuspecs = Get-ChildItem -Path $PSScriptRoot -Filter *.nuspec -Recurse
 
 # myget upgrade 0.9.8
-choco update chocolatey 
+# myget and chocolatey 0.9.9 are incompatible 
 
 Foreach($nuspec in $nuspecs){
     choco pack $nuspec.FullName
