@@ -2,6 +2,9 @@ Write-Host "-=Build all chocolatey packs=-"
 
 $nuspecs = Get-ChildItem -Path $PSScriptRoot -Filter *.nuspec -Recurse
 
+# myget
+choco upgrade chocolatey --yes
+
 Foreach($nuspec in $nuspecs){
     choco pack $nuspec.FullName
 }
