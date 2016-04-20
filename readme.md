@@ -34,8 +34,16 @@ Uses Autohotkey to disable annoying inetmgr dialog
 Simple tail utility with shortcut added to `Send To` menu
 
 #### sqlserver2016
-See readme.md in package folder
+See [readme.md](https://github.com/neutmute/nm-chocolatey-packs/tree/master/sqlserver2016) in package folder
 
+#### sqlserver2012
+See [readme.md](https://github.com/neutmute/nm-chocolatey-packs/tree/master/sqlserver2012) in package folder
+
+#### sqlserver2008
+See [readme.md](https://github.com/neutmute/nm-chocolatey-packs/tree/master/sqlserver2008) in package folder
+
+#### sqlstudio
+SQL Management Studio
 
 
 

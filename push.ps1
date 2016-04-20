@@ -11,7 +11,7 @@ PS> Get-PackageSource -Provider chocolatey
 
 #>
 
-$packageNamesToIgnore = @("agent-ransack", "application-initialization-module");
+$packageNamesToIgnore = @("application-initialization-module");
 $artifactsFolder = "$PSScriptRoot/.artifacts"
 
 $packages = Get-ChildItem "$artifactsFolder" -Filter *.nupkg
