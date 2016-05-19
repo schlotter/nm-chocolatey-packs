@@ -89,23 +89,57 @@ function BuildConfigurationFile()
 
 }
 
-BuildConfigurationFile
+function DetermineSetupPath(){
 
-$mountedIso = Mount-DiskImage -PassThru "$env:choco:sqlserver2008:isoImage"
-$isoDrive = Get-Volume -DiskImage $mountedIso | Select -expand DriveLetter
-Write-Host "Mounted ISO to $isoDrive, starting setup.exe"
+    $global:mustDismountIso = $false
+    if (!(Test-Path env:\choco:sqlserver2008:setupFolder)){
 
-$output = & "$isoDrive`:\setup.exe" "/ConfigurationFile=$configFile"
+        if (!(Test-Path env:\choco:sqlserver2008:isoImage)) 
+        {
+	        Write-Error "Require either choco:sqlserver2008:setupFolder or choco:sqlserver2008:isoImage environment variables to be set"
+            exit -1
+        }
+        
+        $mustDismountIso = $true;
+        $mountedIso = Mount-DiskImage -PassThru "$env:choco:sqlserver2008:isoImage"
+        $isoDrive = Get-Volume -DiskImage $mountedIso | Select -expand DriveLetter
+        Write-Host "Mounted ISO to $isoDrive"
+        $env:choco:sqlserver2008:setupFolder = "$isoDrive`:\"
+    }
 
-$sqlSetupErrorlevel = $LASTEXITCODE
-Write-Host "setup error level=$sqlSetupErrorlevel"
-Write-Host $output
-
-if ($sqlSetupErrorlevel -ne 0)
-{
-	Write-Error "SQL setup.exe exited with errorlevel $sqlSetupErrorlevel"
+    Write-Host "Path to setup.exe is $env:choco:sqlserver2008:setupFolder"
 }
 
-Write-Host "Dismounting ISO"
-Dismount-DiskImage -ImagePath $env:choco:sqlserver2008:isoImage
-exit $sqlSetupErrorlevel
+
+function Teardown(){
+    
+    if ($mustDismountIso){
+        Write-Host "Dismounting ISO"
+        Dismount-DiskImage -ImagePath $env:choco:sqlserver2008:isoImage
+    }
+        
+    $sqlSetupErrorlevel = $LASTEXITCODE
+    Write-Host "setup error level=$sqlSetupErrorlevel"
+    Write-Host $output
+
+    if ($sqlSetupErrorlevel -ne 0)
+    {
+	    Write-Error "SQL setup.exe exited with errorlevel $sqlSetupErrorlevel"
+    }
+
+    exit $sqlSetupErrorlevel
+}
+
+function ExecuteSetup(){
+    $setupExe = "$env:choco:sqlserver2008:setupFolder\setup.exe"
+    Write-Host "Executing $setupExe with $configFile"
+  #  & $setupExe "/ConfigurationFile=$configFile"  
+}
+
+DetermineSetupPath
+
+BuildConfigurationFile
+
+ExecuteSetup
+
+Teardown
