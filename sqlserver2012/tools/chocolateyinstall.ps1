@@ -99,23 +99,64 @@ function BuildConfigurationFile()
 
 }
 
-BuildConfigurationFile
 
-$mountedIso = Mount-DiskImage -PassThru "$env:choco:sqlserver2012:isoImage"
-$isoDrive = Get-Volume -DiskImage $mountedIso | Select -expand DriveLetter
-Write-Host "Mounted ISO to $isoDrive"
+function DetermineSetupPath(){
 
-$output = & "$isoDrive`:\setup.exe" "/ConfigurationFile=$configFile"
+    if (!(Test-Path env:\choco:sqlserver2012:setupFolder)){
 
-$sqlSetupErrorlevel = $LASTEXITCODE
-Write-Host "setup error level=$sqlSetupErrorlevel"
-Write-Host $output
+        if (!(Test-Path env:\choco:sqlserver2012:isoImage)) 
+        {
+	        Write-Error "This package requires a path to SQL installation Media via environment variables. eg: 'SET choco:sqlserver2012:setupFolder=<Folder>' or 'SET choco:sqlserver2012:isoImage=<Filename>'. See readme.md on github."
+            exit -1
+        }
+        
+        $global:mustDismountIso = $true;
+        $mountedIso = Mount-DiskImage -PassThru "$env:choco:sqlserver2012:isoImage"
+        $isoDrive = Get-Volume -DiskImage $mountedIso | Select -expand DriveLetter
+        Write-Host "Mounted ISO to $isoDrive"
+        $env:choco:sqlserver2012:setupFolder = "$isoDrive`:\"
+    }
 
-if ($sqlSetupErrorlevel -ne 0)
-{
-	Write-Error "SQL setup.exe exited with errorlevel $sqlSetupErrorlevel"
+    Write-Host "Path to setup.exe is $env:choco:sqlserver2012:setupFolder"
 }
 
-Write-Host "Dismounting ISO"
-Dismount-DiskImage -ImagePath $env:choco:sqlserver2012:isoImage
-exit $sqlSetupErrorlevel
+
+function Teardown(){
+    
+    if ($global:mustDismountIso){
+        Write-Host "Dismounting ISO"
+        Dismount-DiskImage -ImagePath $env:choco:sqlserver2012:isoImage
+    }
+    else
+    {
+        Write-Host "No ISO to dismount"
+    }
+        
+    $sqlSetupErrorlevel = $LASTEXITCODE
+    Write-Host "setup error level=$sqlSetupErrorlevel"
+    Write-Host $output
+
+    if ($sqlSetupErrorlevel -ne 0)
+    {
+	    Write-Error "SQL setup.exe exited with errorlevel '$sqlSetupErrorlevel'"
+    }
+
+    exit $sqlSetupErrorlevel
+}
+
+function ExecuteSetup(){
+    $setupExe = "$env:choco:sqlserver2012:setupFolder\setup.exe"
+    Write-Host "Executing $setupExe with $configFile"
+    & $setupExe "/ConfigurationFile=$configFile"  
+}
+
+$global:mustDismountIso = $false
+
+DetermineSetupPath
+
+BuildConfigurationFile
+
+ExecuteSetup
+
+Teardown
+

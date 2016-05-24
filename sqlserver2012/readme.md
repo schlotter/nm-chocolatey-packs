@@ -8,8 +8,9 @@ See `chocolateyinstall.ps1` for all environment vars which mirror those in the [
 ##Example install
 Execute this from elevated PowerShell to install to an instance named `SQL2012` with sql management studio and a custom collation:
 
-	#mandatory param
+	#mandatory param - use one of the following
 	$env:choco:sqlserver2012:isoImage="D:\Downloads\en_sql_server_2012_developer_edition_with_service_pack_3_x86_dvd_7286785.iso"
+	$env:choco:sqlserver2012:setupFolder="E:" # Use this for Windows 7 which can't mount an iso from powershell 
 	
 	#optional params
 	$env:choco:sqlserver2012:INSTALLSQLDATADIR="D:\Data\Sql"
