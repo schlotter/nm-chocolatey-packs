@@ -91,16 +91,15 @@ function BuildConfigurationFile()
 
 function DetermineSetupPath(){
 
-    $global:mustDismountIso = $false
     if (!(Test-Path env:\choco:sqlserver2008:setupFolder)){
 
         if (!(Test-Path env:\choco:sqlserver2008:isoImage)) 
         {
-	        Write-Error "Require either choco:sqlserver2008:setupFolder or choco:sqlserver2008:isoImage environment variables to be set"
+	        Write-Error "This package requires a path to SQL installation Media via environment variables. eg: 'SET choco:sqlserver2008:setupFolder=<Folder>' or 'SET choco:sqlserver2008:isoImage=<Filename>'. See readme.md on github."
             exit -1
         }
         
-        $mustDismountIso = $true;
+        $global:mustDismountIso = $true;
         $mountedIso = Mount-DiskImage -PassThru "$env:choco:sqlserver2008:isoImage"
         $isoDrive = Get-Volume -DiskImage $mountedIso | Select -expand DriveLetter
         Write-Host "Mounted ISO to $isoDrive"
@@ -113,9 +112,13 @@ function DetermineSetupPath(){
 
 function Teardown(){
     
-    if ($mustDismountIso){
+    if ($global:mustDismountIso){
         Write-Host "Dismounting ISO"
         Dismount-DiskImage -ImagePath $env:choco:sqlserver2008:isoImage
+    }
+    else
+    {
+        Write-Host "No ISO to dismount"
     }
         
     $sqlSetupErrorlevel = $LASTEXITCODE
@@ -124,7 +127,7 @@ function Teardown(){
 
     if ($sqlSetupErrorlevel -ne 0)
     {
-	    Write-Error "SQL setup.exe exited with errorlevel $sqlSetupErrorlevel"
+	    Write-Error "SQL setup.exe exited with errorlevel '$sqlSetupErrorlevel'"
     }
 
     exit $sqlSetupErrorlevel
@@ -133,8 +136,10 @@ function Teardown(){
 function ExecuteSetup(){
     $setupExe = "$env:choco:sqlserver2008:setupFolder\setup.exe"
     Write-Host "Executing $setupExe with $configFile"
-  #  & $setupExe "/ConfigurationFile=$configFile"  
+    & $setupExe "/ConfigurationFile=$configFile"  
 }
+
+$global:mustDismountIso = $false
 
 DetermineSetupPath
 

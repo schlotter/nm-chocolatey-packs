@@ -8,8 +8,9 @@ See `chocolateyinstall.ps1` for all environment vars which mirror those in the [
 ##Example install
 Execute this from elevated PowerShell to install to an instance named `SQL2008` with sql management studio and a custom collation:
 
-	#mandatory param
+	#mandatory param - use one of the following
 	$env:choco:sqlserver2008:isoImage="D:\Downloads\en_sql_server_2008_r2_developer_x86_x64_ia64_dvd_522665.iso"
+	$env:choco:sqlserver2008:setupFolder="E:" # Use this for Windows 7 which can't mount an iso from powershell 
 	
 	#optional params
 	$env:choco:sqlserver2008:INSTANCEID="sql2008"
