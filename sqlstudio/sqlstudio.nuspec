@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>sqlstudio</id>
-    <version>13.0.14000.36</version>
+    <version>13.0.15000.23</version>
     <title>SQL Server Management Studio</title>
     <authors>Microsoft</authors>
     <owners>seventypercent</owners>
