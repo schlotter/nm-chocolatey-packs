@@ -20,5 +20,5 @@ Execute this from elevated PowerShell to install to an instance named `SQL2008` 
 	$env:choco:sqlserver2008:SQLSVCACCOUNT="NT AUTHORITY\SYSTEM"
 	$env:choco:sqlserver2008:INSTALLSQLDATADIR="D:\data\sql"
 
-	choco install sqlserver2008
+	choco install sqlserver2008 -Source "https://www.myget.org/F/nm-chocolatey-packs/api/v2"
 

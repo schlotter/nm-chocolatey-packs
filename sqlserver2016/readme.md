@@ -18,7 +18,7 @@ From elevated PowerShell:
 	$env:choco:sqlserver2016:SQLSVCACCOUNT="NT Service\MSSQL`$SQL2016"
 	$env:choco:sqlserver2016:INSTALLSQLDATADIR="C:\Data\Sql"
  
-	choco install sqlserver2016
+	choco install sqlserver2016 -Source "https://www.myget.org/F/nm-chocolatey-packs/api/v2"
 
 ##Prerequisites
 [KB2919355](https://support.microsoft.com/en-au/kb/2919355) for applicable operating systems
