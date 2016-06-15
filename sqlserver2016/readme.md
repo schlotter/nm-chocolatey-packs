@@ -17,6 +17,7 @@ From elevated PowerShell:
 	$env:choco:sqlserver2016:AGTSVCACCOUNT="NT Service\SQLAgent`$SQL2016"
 	$env:choco:sqlserver2016:SQLSVCACCOUNT="NT Service\MSSQL`$SQL2016"
 	$env:choco:sqlserver2016:INSTALLSQLDATADIR="C:\Data\Sql"
+	$env:choco:sqlserver2016:SECURITYMODE="SQL"                 # mixed mode auth
  
 	choco install sqlserver2016 -Source "https://www.myget.org/F/nm-chocolatey-packs/api/v2"
 

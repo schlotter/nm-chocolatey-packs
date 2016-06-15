@@ -20,6 +20,7 @@ Execute this from elevated PowerShell to install to an instance named `SQL2012` 
 	$env:choco:sqlserver2012:AGTSVCACCOUNT="NT Service\SQLAgent`$SQL2012"
 	$env:choco:sqlserver2012:SQLSVCACCOUNT="NT Service\MSSQL`$SQL2012"
 	$env:choco:sqlserver2012:SQLCOLLATION="SQL_Latin1_General_CP1_CI_AS"
+	$env:choco:sqlserver2012:SECURITYMODE="SQL"                 # mixed mode auth
 
 	choco install sqlserver2012 -Source "https://www.myget.org/F/nm-chocolatey-packs/api/v2"
 
