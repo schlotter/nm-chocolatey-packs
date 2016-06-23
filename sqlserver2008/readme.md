@@ -19,7 +19,10 @@ Execute this from elevated PowerShell to install to an instance named `SQL2008` 
 	$env:choco:sqlserver2008:SQLCOLLATION="SQL_Latin1_General_CP1_CI_AS"
 	$env:choco:sqlserver2008:SQLSVCACCOUNT="NT AUTHORITY\SYSTEM"
 	$env:choco:sqlserver2008:INSTALLSQLDATADIR="D:\data\sql"
-	$env:choco:sqlserver2008:SECURITYMODE="SQL"                 # mixed mode auth
+	
+	# If you want mixed mode auth, you must supply a password for sa, otherwise skip these two configs
+	$env:choco:sqlserver2008:SECURITYMODE="SQL"                
+	$env:choco:sqlserver2008:SAPWD="0wn3d"
 
 	choco install sqlserver2008 -Source "https://www.myget.org/F/nm-chocolatey-packs/api/v2"
 

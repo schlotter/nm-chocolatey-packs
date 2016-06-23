@@ -8,7 +8,6 @@ See `chocolateyinstall.ps1` for all environment vars which mirror those in the [
 ##Example install
 From elevated PowerShell:
 
-	
 	$env:choco:sqlserver2016:isoImage="D:\Downloads\en_sql_server_2016_rc_2_x64_dvd_8509698.iso"
 
 	$env:choco:sqlserver2016:PID="22222-00000-00000-00000-00000" # Developer edition
@@ -17,7 +16,10 @@ From elevated PowerShell:
 	$env:choco:sqlserver2016:AGTSVCACCOUNT="NT Service\SQLAgent`$SQL2016"
 	$env:choco:sqlserver2016:SQLSVCACCOUNT="NT Service\MSSQL`$SQL2016"
 	$env:choco:sqlserver2016:INSTALLSQLDATADIR="C:\Data\Sql"
-	$env:choco:sqlserver2016:SECURITYMODE="SQL"                 # mixed mode auth
+
+	# If you want mixed mode auth, you must supply a password for sa, otherwise skip these two configs
+	$env:choco:sqlserver2016:SECURITYMODE="SQL"                
+	$env:choco:sqlserver2016:SAPWD="0wn3d"
  
 	choco install sqlserver2016 -Source "https://www.myget.org/F/nm-chocolatey-packs/api/v2"
 
