@@ -165,11 +165,11 @@ function ExecuteSetup(){
 	Install-ChocolateyInstallPackage `
           -PackageName "sqlserver2016" `
           -FileType 'exe' `
-          -SilentArgs "/ConfigurationFile=$configFile" `
+          -SilentArgs "/IACCEPTSQLSERVERLICENSETERMS /ConfigurationFile=$configFile" `
           -File "$setupExe" `
           -ValidExitCodes $validExitCodes
 
-    #& $setupExe "/ConfigurationFile=$configFile"  
+    #& $setupExe "/IACCEPTSQLSERVERLICENSETERMS /ConfigurationFile=$configFile"  
 }
 
 $global:mustDismountIso = $false
