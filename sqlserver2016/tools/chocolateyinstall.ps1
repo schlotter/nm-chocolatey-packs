@@ -167,7 +167,6 @@ function ExecuteSetup(){
           -FileType 'exe' `
           -SilentArgs "/IACCEPTSQLSERVERLICENSETERMS /ConfigurationFile=$configFile" `
           -File "$setupExe" `
-          -ValidExitCodes $validExitCodes
 
     #& $setupExe "/IACCEPTSQLSERVERLICENSETERMS /ConfigurationFile=$configFile"  
 }
