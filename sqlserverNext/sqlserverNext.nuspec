@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>sqlserver{Next}</id>
+    <version>1.0.0.0</version>
+    <title>SQL Server {Next}</title>
+    <authors>Microsoft</authors>
+    <owners>seventypercent</owners>
+    <projectUrl>{Url to product page}</projectUrl>
+	<packageSourceUrl>https://github.com/neutmute/nm-chocolatey-packs/tree/master/sqlserver{Next}</packageSourceUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Bootstrap SQL Server {Next} installations.
+
+	See readme.md for more usage:
+	https://github.com/neutmute/nm-chocolatey-packs/tree/master/sqlserver{Next}
+
+	*Prerequisites*
+	</description>
+    <summary>SQL Server {Next}</summary>
+    <tags></tags>
+  </metadata>
+  <files>
+    <file src="**" exclude="Docs\*;readme.md" />
+  </files>
+</package>
