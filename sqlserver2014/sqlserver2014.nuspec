@@ -13,6 +13,11 @@
 
 	See readme.md for more usage:
 	https://github.com/neutmute/nm-chocolatey-packs/tree/master/sqlserver2014
+
+  *Prerequisites*
+	[.NET Framework 3.5 SP1](https://www.microsoft.com/download/details.aspx?id=22)
+
+  Check (https://technet.microsoft.com/en-us/library/ms143506(v=sql.120).aspx) for all Hardware and Software prerequisites.
     </description>
     <summary>SQL Server 2014</summary>
     <tags>database sqlserver sqlserver2014</tags>
