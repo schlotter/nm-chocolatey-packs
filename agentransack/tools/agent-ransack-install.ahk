@@ -7,10 +7,10 @@ WinWait, Agent Ransack x64 Setup, , 60
 WinActivate
 BlockInput On
 Send !n
-Sleep, 100
+Sleep, 500
 Send !a
 Send !n
-Sleep, 100
+Sleep, 500
 Send !n
 Sleep, 500
 Send !i
