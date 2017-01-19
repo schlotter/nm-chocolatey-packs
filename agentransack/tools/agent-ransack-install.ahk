@@ -6,6 +6,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 WinWait, Agent Ransack x64 Setup, , 60
 WinActivate
 BlockInput On
+Sleep, 500      ; wait for space calculation
 Send !n
 Sleep, 500
 Send !a

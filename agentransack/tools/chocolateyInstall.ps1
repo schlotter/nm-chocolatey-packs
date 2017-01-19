@@ -2,7 +2,7 @@
 
 $packageName= 'AgentRansack'
 $toolsDir   = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
-$url        = 'https://download.mythicsoft.com/ar/828/AgentRansack_828.exe'
+$url        = 'https://download.mythicsoft.com/ar/865/AgentRansack_865.exe'
 
 $packageArgs = @{
   packageName   = $packageName
@@ -12,7 +12,7 @@ $packageArgs = @{
   silentArgs 	= ""
 
   softwareName  = 'AgentRansack'
-  checksum      = 'adf11803e16b782eb1a437bb49bfb4fde82a5416'
+  checksum      = '34953E0F48AB4E5D45F43D5AD50E9C00C25C7AD7'
   checksumType  = 'sha1'
 }
 
