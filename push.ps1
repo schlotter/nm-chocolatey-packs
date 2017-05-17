@@ -4,7 +4,7 @@
 Assumes 
 
 1) You have configured your choco API key like below - see https://chocolatey.org/account
-choco apiKey -k aaaabbbbb-cccc-dddd-eeee-ffffffeeeefff -source https://chocolatey.org/
+choco apiKey -k aaaabbbbb-cccc-dddd-eeee-ffffffeeeefff -source https://push.chocolatey.org/
 
 2) You have setup OneGet (Powershell 5) with chocolatey source
 PS> Get-PackageSource -Provider chocolatey
@@ -36,7 +36,7 @@ foreach($package in $packages)
     if ($publishedVersion -eq $null)
     {
         Write-Host "@@@@@ Chocolatey package not found, we need to push $packageName..."
-        &choco push "$artifactsFolder\$package"
+        &choco push "$artifactsFolder\$package" -source https://push.chocolatey.org/
     }
 
 }
