@@ -1,8 +1,14 @@
 ﻿$ErrorActionPreference = 'Stop';
 
+#cinst checksum
+#checksum -t=sha1 AgentRansack_nnn.exe
+
+#test with:
+#cinst agentransack.8.0.867.0.nupkg --force
+
 $packageName= 'AgentRansack'
 $toolsDir   = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
-$url        = 'https://download.mythicsoft.com/ar/865/AgentRansack_865.exe'
+$url        = 'https://download.mythicsoft.com/ar/867/AgentRansack_867.exe'
 
 $packageArgs = @{
   packageName   = $packageName
@@ -12,7 +18,7 @@ $packageArgs = @{
   silentArgs 	= ""
 
   softwareName  = 'AgentRansack'
-  checksum      = '34953E0F48AB4E5D45F43D5AD50E9C00C25C7AD7'
+  checksum      = '6AF2115B473FDE77A9DC958DE4FF730EB25810EA'
   checksumType  = 'sha1'
 }
 
