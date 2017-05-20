@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>fscapture</id>
+    <version>8.5</version>
+    <title>FastStone Capture</title>
+    <authors>FastStone</authors>
+    <owners>seventypercent</owners>
+    <licenseUrl>hhttp://www.faststone.org/FSCaptureDetail.htm</licenseUrl>
+    <projectUrl>http://www.faststone.org/FSCaptureDetail.htm</projectUrl>
+	<packageSourceUrl>https://github.com/neutmute/nm-chocolatey-packs</packageSourceUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <summary>Screen capture tool</summary>
+    <description>A powerful, lightweight, yet full-featured screen capture tool that allows you to easily capture and annotate anything on the screen including windows, objects, menus, full screen, rectangular/freehand regions and even scrolling windows/web pages. It also allows you to record screen activities and sound into video files.</description>
+    <copyright>FastStone</copyright>
+    <tags>admin</tags>
+  </metadata>
+</package>
