@@ -6,13 +6,16 @@
     <title>FastStone Capture</title>
     <authors>FastStone</authors>
     <owners>seventypercent</owners>
-    <licenseUrl>hhttp://www.faststone.org/FSCaptureDetail.htm</licenseUrl>
+    <licenseUrl>http://www.faststone.org/order.htm</licenseUrl>
     <projectUrl>http://www.faststone.org/FSCaptureDetail.htm</projectUrl>
 	<packageSourceUrl>https://github.com/neutmute/nm-chocolatey-packs</packageSourceUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <summary>Screen capture tool</summary>
     <description>A powerful, lightweight, yet full-featured screen capture tool that allows you to easily capture and annotate anything on the screen including windows, objects, menus, full screen, rectangular/freehand regions and even scrolling windows/web pages. It also allows you to record screen activities and sound into video files.</description>
     <copyright>FastStone</copyright>
-    <tags>admin</tags>
+    <tags>admin trial screen capture faststone</tags>
   </metadata>
+  <files>
+    <file src="**" exclude="tools\readme.txt" />
+  </files>
 </package>

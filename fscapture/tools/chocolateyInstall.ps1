@@ -1,11 +1,5 @@
 ﻿$ErrorActionPreference = 'Stop';
 
-#cinst checksum
-#checksum -t=sha1 FSCaptureSetup85.exe
-
-#test with:
-#cinst fscapture.8.5.nupkg --force
-
 $packageName= 'fscapture'
 $toolsDir   = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
 $url        = 'http://www.faststonesoft.net/DN/FSCaptureSetup85.exe'
