@@ -1,0 +1,1 @@
+reg import "$PSScriptRoot\Remove_Open_PowerShell_window_here_as_administrator_context_menu.reg"
