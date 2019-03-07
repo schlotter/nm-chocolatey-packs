@@ -9,5 +9,6 @@
     <projectUrl>https://github.com/neutmute/nm-chocolatey-packs</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Add 'Open elevated Powershell window here' context menu to Windows Explorer</description>
+    <tags>powershell</tags>
   </metadata>
 </package>
