@@ -8,7 +8,7 @@
     <owners>neutmute</owners>
     <projectUrl>https://github.com/neutmute/nm-chocolatey-packs</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Add 'Open elevated PowerShell window here' context menu to Windows Explorer</description>
+    <description>Add 'Open PowerShell window here as administrator' context menu to Windows Explorer</description>
     <tags>powershell</tags>
   </metadata>
 </package>
