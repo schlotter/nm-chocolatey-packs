@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>powershellHereAsAdmin</id>
+    <id>powershellhere-elevated</id>
     <version>1.0.0</version>
     <title>Add 'Open PowerShell window here as administrator' context menu</title>
     <authors>neutmute</authors>
