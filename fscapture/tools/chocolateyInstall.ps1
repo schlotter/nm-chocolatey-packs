@@ -2,7 +2,7 @@
 
 $packageName= 'fscapture'
 $toolsDir   = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
-$url        = 'http://www.faststonesoft.net/DN/FSCaptureSetup85.exe'
+$url        = 'http://www.faststonesoft.net/DN/FSCaptureSetup90.exe'
 
 $packageArgs = @{
   packageName   = $packageName
@@ -12,7 +12,7 @@ $packageArgs = @{
   silentArgs 	= "/S"
 
   softwareName  = 'FastStone Image Capture'
-  checksum      = 'B30A1D9C2DED7F914CEC4C65A0507FC294F193F0'
+  checksum      = 'AB3B0FDE4A162D81BD7D3520658B8F7DD95F7645'
   checksumType  = 'sha1'
 }
 

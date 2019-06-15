@@ -1,6 +1,10 @@
 
-cinst checksum
-checksum -t=sha1 FSCaptureSetup85.exe
+curl -o FSCaptureSetup90.exe http://www.faststonesoft.net/DN/FSCaptureSetup90.exe
 
-test with:
-cinst fscapture.8.5.nupkg --force
+cinst checksum
+checksum -t=sha1 FSCaptureSetup90.exe
+
+choco pack fscapture.nuspec
+
+# test with:
+cinst fscapture.9.0.nupkg --force
