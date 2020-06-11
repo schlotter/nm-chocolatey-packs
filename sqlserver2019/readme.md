@@ -19,6 +19,7 @@ From elevated PowerShell:
 	$env:choco:sqlserver2019:INSTALLSQLDATADIR="C:\Data\Sql"
 	$env:choco:sqlserver2019:NPENABLED="1"
 	$env:choco:sqlserver2019:FEATURES="SQLENGINE,IS"
+	$env:choco:sqlserver2019:SQLCOLLATION="SQL_Latin1_General_CP1_CI_AS"
 	
 	# If you want mixed mode auth, you must supply a password for sa, otherwise skip these two configs
 	$env:choco:sqlserver2019:SECURITYMODE="SQL"
