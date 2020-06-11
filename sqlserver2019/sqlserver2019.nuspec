@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>sqlserver2019</id>
+    <version>1.0.0.0</version>
+    <title>SQL Server 2019</title>
+    <authors>Microsoft</authors>
+    <owners>seventypercent</owners>
+    <projectUrl>https://www.microsoft.com/en-us/sql-server/sql-server-2019</projectUrl>
+	<packageSourceUrl>https://github.com/neutmute/nm-chocolatey-packs/tree/master/sqlserver2019</packageSourceUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Bootstrap SQL Server 2019 installations.
+
+	See readme.md for more usage:
+	https://github.com/neutmute/nm-chocolatey-packs/tree/master/sqlserver2019
+
+	*Prerequisites*
+	</description>
+    <summary>SQL Server 2019</summary>
+    <tags></tags>
+  </metadata>
+  <files>
+    <file src="**" exclude="Docs\*;readme.md" />
+  </files>
+</package>
