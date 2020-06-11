@@ -53,8 +53,8 @@ function BuildConfigurationFile()
     if (Test-Path env:\choco:sqlserver2019:PBPORTRANGE){Add-Content $configFile "PBPORTRANGE=`"$env:choco:sqlserver2019:PBPORTRANGE`""}
     if (Test-Path env:\choco:sqlserver2019:PBSCALEOUT){Add-Content $configFile "PBSCALEOUT=`"$env:choco:sqlserver2019:PBSCALEOUT`""}
     if (Test-Path env:\choco:sqlserver2019:PID){Add-Content $configFile "PID=`"$env:choco:sqlserver2019:PID`""}
-    if (Test-Path env:\choco:sqlserver2019:QUIET){Add-Content $configFile "Q or QUIET=`"$env:choco:sqlserver2019:QUIET`""}
-    if (Test-Path env:\choco:sqlserver2019:QUIETSIMPLE){Add-Content $configFile "QS or QUIETSIMPLE=`"$env:choco:sqlserver2019:QUIETSIMPLE`""}
+    if (Test-Path env:\choco:sqlserver2019:QUIET){Add-Content $configFile "QUIET=`"$env:choco:sqlserver2019:QUIET`""}
+    if (Test-Path env:\choco:sqlserver2019:QUIETSIMPLE){Add-Content $configFile "QUIETSIMPLE=`"$env:choco:sqlserver2019:QUIETSIMPLE`""}
     if (Test-Path env:\choco:sqlserver2019:UIMODE){Add-Content $configFile "UIMODE=`"$env:choco:sqlserver2019:UIMODE`""}
     if (Test-Path env:\choco:sqlserver2019:SQMREPORTING){Add-Content $configFile "SQMREPORTING=`"$env:choco:sqlserver2019:SQMREPORTING`""}
     if (Test-Path env:\choco:sqlserver2019:HIDECONSOLE){Add-Content $configFile "HIDECONSOLE=`"$env:choco:sqlserver2019:HIDECONSOLE`""}
