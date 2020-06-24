@@ -24,7 +24,6 @@ function BuildConfigurationFile()
     if (!(Test-Path env:\choco:sqlserver2019:IACCEPTROPENLICENSETERMS)){$env:choco:sqlserver2019:IACCEPTROPENLICENSETERMS="TRUE"}
     if (!(Test-Path env:\choco:sqlserver2019:ENU)){$env:choco:sqlserver2019:ENU="TRUE"}
     if (!(Test-Path env:\choco:sqlserver2019:FEATURES)){$env:choco:sqlserver2019:FEATURES="SQLEngine"}
-    if (!(Test-Path env:\choco:sqlserver2019:PID)){$env:choco:sqlserver2019:PID="22222-00000-00000-00000-00000"}
     if (!(Test-Path env:\choco:sqlserver2019:QUIET)){$env:choco:sqlserver2019:QUIET="TRUE"}
     if (!(Test-Path env:\choco:sqlserver2019:INSTANCENAME)){$env:choco:sqlserver2019:INSTANCENAME="MSSQLSERVER"}
     

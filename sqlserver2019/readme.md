@@ -24,5 +24,12 @@ From elevated PowerShell:
 	# If you want mixed mode auth, you must supply a password for sa, otherwise skip these two configs
 	$env:choco:sqlserver2019:SECURITYMODE="SQL"
 	$env:choco:sqlserver2019:SAPWD="0wn3d" # Be sure to update this before running or after install
+	
 
-	choco install sqlserver2019 -Source "https://www.myget.org/F/nm-chocolatey-packs/api/v2"
+	$env:choco:sqlserver2019:UpdateEnabled=$true
+	## Create a folder D:\temp\Updates and put any cumulative updates in there
+
+	choco install sqlserver2019 --source=$sqlPackageSource  --install-arguments="'/UpdateSource="D:\temp\Updates"' /INDICATEPROGRESS"
+
+	# Delete the INI file as it has passwords in it
+	Remove-Item 'C:\programdata\chocolatey' -recurse -Include configuration.ini
