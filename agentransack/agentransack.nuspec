@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>agentransack</id>
-    <version>2019.2929</version>
+    <version>2019.2946</version>
     <title>Agent Ransack</title>
     <authors>Mythicsoft</authors>
     <owners>seventypercent</owners>
@@ -15,6 +15,10 @@
     <summary>Agent Ransack is a free 'lite' version of FileLocator Pro. It is free for both personal and commercial use.</summary>
     <copyright>Mythicsoft</copyright>
     <tags>admin</tags>
-    <releaseNotes>Improve silent install reliability</releaseNotes>
+    <releaseNotes>
+* Japanese translation (beta).
+* Bug fix: Keyword summary report not displaying empty keywords properly.
+* Minor fixes/improvements
+    </releaseNotes>
   </metadata>
 </package>
