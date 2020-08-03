@@ -15,6 +15,10 @@
     <summary>Agent Ransack is a free 'lite' version of FileLocator Pro. It is free for both personal and commercial use.</summary>
     <copyright>Mythicsoft</copyright>
     <tags>admin</tags>
-    <releaseNotes>Improve silent install reliability</releaseNotes>
+    <releaseNotes>
+* Japanese translation (beta).
+* Bug fix: Keyword summary report not displaying empty keywords properly.
+* Minor fixes/improvements
+    </releaseNotes>
   </metadata>
 </package>
