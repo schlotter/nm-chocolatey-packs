@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>agentransack</id>
-    <version>2019.2946</version>
+    <version>2019.2947</version>
     <title>Agent Ransack</title>
     <authors>Mythicsoft</authors>
     <owners>seventypercent</owners>
@@ -16,8 +16,8 @@
     <copyright>Mythicsoft</copyright>
     <tags>admin</tags>
     <releaseNotes>
-* Japanese translation (beta).
-* Bug fix: Keyword summary report not displaying empty keywords properly.
+* Additional installer flags /regdetails /langfile /ui
+* Bug fix: Exporting index based searches much faster if content not required.
 * Minor fixes/improvements
     </releaseNotes>
   </metadata>
