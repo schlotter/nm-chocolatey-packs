@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>agentransack</id>
-    <version>2019.2951</version>
+    <version>2022.3314</version>
     <title>Agent Ransack</title>
     <authors>Mythicsoft</authors>
     <owners>seventypercent</owners>
@@ -16,12 +16,14 @@
     <copyright>Mythicsoft</copyright>
     <tags>admin</tags>
     <releaseNotes>
-* Reduced background CPU usage when idle
-* Improved parsing of MBOX/EML date time format.
-* Improved SearchTask recovery if 3rd party IFilter causes problems.
-* Bug fix: "A required resource was unavailable" error when lots of search terms (> 10,000) specified.
-* Bug fix: Relative date/time searching issues with FR/ES/NL languages.
-* Minor fixes/improvements
+* New column 'Last Saved By'.
+* Bug fix: Issue installing 32-bit portable version.
+* Bug fix: FR/ES issue with FILELIST.
+* Bug fix: Middle mouse button on tab was closing more than one tab.
+* Bug fix: Compressed archives locked until app closed.
+* Bug fix: Index monitor issue with archives and emails.
+* Bug fix: Phone searching, item selection issue.
+* Other minor fixes.
     </releaseNotes>
   </metadata>
 </package>
