@@ -1,8 +1,8 @@
 $ErrorActionPreference = 'Stop';
 
 #cinst checksum
-#checksum -t=sha1 AgentRansack_x86_msi_nnnn.zip
-#checksum -t=sha1 AgentRansack_x64_msi_nnnn.zip
+#checksum -t=sha256 AgentRansack_x86_msi_nnnn.zip
+#checksum -t=sha256 AgentRansack_x64_msi_nnnn.zip
 
 #test with (depending if already installed):
 #cinst agentransack -s .
@@ -10,10 +10,10 @@ $ErrorActionPreference = 'Stop';
 
 $packageName= 'AgentRansack'
 $toolsDir   = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
-$url        = 'https://download.mythicsoft.com/flp/3314/agentransack_x86_msi_3314.zip'
-$url64      = 'https://download.mythicsoft.com/flp/3314/agentransack_x64_msi_3314.zip'
-$fileLocation = Join-Path $toolsDir 'agentransack_x86_3314.msi'
-$fileLocation64 = Join-Path $toolsDir 'agentransack_x64_3314.msi'
+$url        = 'https://download.mythicsoft.com/flp/3326/agentransack_x86_msi_3326.zip'
+$url64      = 'https://download.mythicsoft.com/flp/3326/agentransack_x64_msi_3326.zip'
+$fileLocation = Join-Path $toolsDir 'agentransack_x86_3326.msi'
+$fileLocation64 = Join-Path $toolsDir 'agentransack_x64_3326.msi'
 
 $packageArgs = @{
   packageName   = $packageName
@@ -28,10 +28,10 @@ $packageArgs = @{
   validExitCodes= @(0)
 
   softwareName  = 'AgentRansack'
-  checksum      = '488036CCA999ED7A30ED71E1764565DDA58EB75F'
-  checksumType  = 'sha1'
-  checksum64    = '04BE914A482DC2648D64B1E42732C2DF0DB5E39B'
-  checksumType64= 'sha1'
+  checksum      = 'A8B03186C831E8085058CF745E989E1E45481E1B078F31895B08912D8F9C1738'
+  checksumType  = 'sha256'
+  checksum64    = 'F85A90AFC7DE247D2402F73BB6E669392EDCBA288EFD4241E9CF9DF35E8E1BA9'
+  checksumType64= 'sha256'
 }
 
 Install-ChocolateyZipPackage @packageArgs
