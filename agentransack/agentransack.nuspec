@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>agentransack</id>
-    <version>2022.3314</version>
+    <version>2022.3326</version>
     <title>Agent Ransack</title>
     <authors>Mythicsoft</authors>
     <owners>seventypercent</owners>
@@ -16,14 +16,14 @@
     <copyright>Mythicsoft</copyright>
     <tags>admin</tags>
     <releaseNotes>
-* New column 'Last Saved By'.
-* Bug fix: Issue installing 32-bit portable version.
-* Bug fix: FR/ES issue with FILELIST.
-* Bug fix: Middle mouse button on tab was closing more than one tab.
-* Bug fix: Compressed archives locked until app closed.
-* Bug fix: Index monitor issue with archives and emails.
-* Bug fix: Phone searching, item selection issue.
-* Other minor fixes.
+* Note: Index logs moved to local device instead of index store folder.
+* New policies DisabledSearchPaths and AllowedSearchPaths to limit permitted search paths.
+* Added MOBI file support.
+* Improved index monitor network error recovery.
+* Bug fix: Context menu keyboard functionality fixed.
+* Bug fix: Occassional crash when using 'name:' prefix on Index Search.
+* Bug fix: Favorites list sort functionality fixed.
+* Other minor changes/fixes.
     </releaseNotes>
   </metadata>
 </package>
