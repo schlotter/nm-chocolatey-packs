@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>agentransack</id>
-    <version>2022.3326</version>
+    <version>2022.3335</version>
     <title>Agent Ransack</title>
     <authors>Mythicsoft</authors>
     <owners>seventypercent</owners>
@@ -16,13 +16,11 @@
     <copyright>Mythicsoft</copyright>
     <tags>admin</tags>
     <releaseNotes>
-* Note: Index logs moved to local device instead of index store folder.
-* New policies DisabledSearchPaths and AllowedSearchPaths to limit permitted search paths.
-* Added MOBI file support.
-* Improved index monitor network error recovery.
-* Bug fix: Context menu keyboard functionality fixed.
-* Bug fix: Occassional crash when using 'name:' prefix on Index Search.
-* Bug fix: Favorites list sort functionality fixed.
+* New columns 'File name length' and 'Path length'.
+* Improved view state restore when switching between searches.
+* Bug fix: Index search highlighting for CN, JP, KR text.
+* Bug fix: EML file encodings for non-ASCII emails.
+* Bug fix: Column filters not working properly during search.
 * Other minor changes/fixes.
     </releaseNotes>
   </metadata>
