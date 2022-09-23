@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>agentransack</id>
-    <version>2022.3335</version>
+    <version>2022.3341</version>
     <title>Agent Ransack</title>
     <authors>Mythicsoft</authors>
     <owners>seventypercent</owners>
@@ -16,11 +16,10 @@
     <copyright>Mythicsoft</copyright>
     <tags>admin</tags>
     <releaseNotes>
-* New columns 'File name length' and 'Path length'.
-* Improved view state restore when switching between searches.
-* Bug fix: Index search highlighting for CN, JP, KR text.
-* Bug fix: EML file encodings for non-ASCII emails.
-* Bug fix: Column filters not working properly during search.
+* Updated OCR to Tesseract 5.2.
+* Bug fix: Large text settings too big for UI.
+* Bug fix: Indexer no longer overwrites index if data source unavailable.
+* Bug fix: Indexer wasn't using process priority settings.
 * Other minor changes/fixes.
     </releaseNotes>
   </metadata>
