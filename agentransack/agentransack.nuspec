@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>agentransack</id>
-    <version>2022.3341</version>
+    <version>2022.3349</version>
     <title>Agent Ransack</title>
     <authors>Mythicsoft</authors>
     <owners>seventypercent</owners>
@@ -16,10 +16,12 @@
     <copyright>Mythicsoft</copyright>
     <tags>admin</tags>
     <releaseNotes>
-* Updated OCR to Tesseract 5.2.
-* Bug fix: Large text settings too big for UI.
-* Bug fix: Indexer no longer overwrites index if data source unavailable.
-* Bug fix: Indexer wasn't using process priority settings.
+* Index OCR settings now stored separately per index.
+* Indexing summary added to Messages tab.
+* Bug fix: Intermittent crash with screen reading software.
+* Bug fix: Location filters incorrectly processing back slashes.
+* Bug fix: Index search 'unexpected error' fix.
+* Bug fix: Index monitor not detecting 'offline' location source at startup.
 * Other minor changes/fixes.
     </releaseNotes>
   </metadata>
