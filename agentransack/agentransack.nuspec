@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>agentransack</id>
-    <version>2022.3335</version>
+    <version>2022.3349</version>
     <title>Agent Ransack</title>
     <authors>Mythicsoft</authors>
     <owners>seventypercent</owners>
@@ -16,11 +16,12 @@
     <copyright>Mythicsoft</copyright>
     <tags>admin</tags>
     <releaseNotes>
-* New columns 'File name length' and 'Path length'.
-* Improved view state restore when switching between searches.
-* Bug fix: Index search highlighting for CN, JP, KR text.
-* Bug fix: EML file encodings for non-ASCII emails.
-* Bug fix: Column filters not working properly during search.
+* Index OCR settings now stored separately per index.
+* Indexing summary added to Messages tab.
+* Bug fix: Intermittent crash with screen reading software.
+* Bug fix: Location filters incorrectly processing back slashes.
+* Bug fix: Index search 'unexpected error' fix.
+* Bug fix: Index monitor not detecting 'offline' location source at startup.
 * Other minor changes/fixes.
     </releaseNotes>
   </metadata>
