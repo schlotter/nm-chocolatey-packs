@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>agentransack</id>
-    <version>2022.3366</version>
+    <version>2022.3367</version>
     <title>Agent Ransack</title>
     <authors>Mythicsoft</authors>
     <owners>seventypercent</owners>
@@ -16,16 +16,9 @@
     <copyright>Mythicsoft</copyright>
     <tags>admin</tags>
     <releaseNotes>
-* New: Bulk Copy now supports copying folders.
-* New: Single-instance mode (Shell Configuration).
-* Improved EXIF details for PNG and JPG files.
-* OCR page orientation detection.
-* Summary keyword report speed improvements.
-* Indexing can support larger documents.
-* Visual Studio 2022 supported as external editor.
-* Bug fix: Occassional index search delays between searches.
-* Bug fix: Docking/undocking window restore issues.
-* Bug fix: Context menu rename was not working.
+* Bug fix: Index searching with column filters was causing focus issue.
+* Bug fix: EXIF reading issues on some images.
+* Bug fix: Possible truncation of text with OCR on PDFs with text.
 * Other minor changes/fixes.
     </releaseNotes>
   </metadata>
