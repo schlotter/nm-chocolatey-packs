@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>agentransack</id>
-    <version>2022.3349</version>
+    <version>2022.3367</version>
     <title>Agent Ransack</title>
     <authors>Mythicsoft</authors>
     <owners>seventypercent</owners>
@@ -16,12 +16,9 @@
     <copyright>Mythicsoft</copyright>
     <tags>admin</tags>
     <releaseNotes>
-* Index OCR settings now stored separately per index.
-* Indexing summary added to Messages tab.
-* Bug fix: Intermittent crash with screen reading software.
-* Bug fix: Location filters incorrectly processing back slashes.
-* Bug fix: Index search 'unexpected error' fix.
-* Bug fix: Index monitor not detecting 'offline' location source at startup.
+* Bug fix: Index searching with column filters was causing focus issue.
+* Bug fix: EXIF reading issues on some images.
+* Bug fix: Possible truncation of text with OCR on PDFs with text.
 * Other minor changes/fixes.
     </releaseNotes>
   </metadata>
