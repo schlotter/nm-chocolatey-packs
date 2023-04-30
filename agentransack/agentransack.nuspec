@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>agentransack</id>
-    <version>2022.3367</version>
+    <version>2022.3389</version>
     <title>Agent Ransack</title>
     <authors>Mythicsoft</authors>
     <owners>seventypercent</owners>
@@ -16,9 +16,14 @@
     <copyright>Mythicsoft</copyright>
     <tags>admin</tags>
     <releaseNotes>
-* Bug fix: Index searching with column filters was causing focus issue.
-* Bug fix: EXIF reading issues on some images.
-* Bug fix: Possible truncation of text with OCR on PDFs with text.
+* Bug fix: Hits not displaying with case-sensitive index NEAR search.
+* Bug fix: Contents view not sized correctly.
+* Bug fix: Expression editor was incorrectly concatenating values.
+* New: Edit history option in History settings.
+* Bug fix: Index settings changes were not being saved if monitoring active.
+* Bug fix: Long running index updates could fail with 'This IndexWriter is closed'.
+* Bug fix: Column widths and views were not restoring properly.
+* Bug fix: PDF/OCR issues when document paths included non-ASCII characters.
 * Other minor changes/fixes.
     </releaseNotes>
   </metadata>
