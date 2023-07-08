@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>agentransack</id>
-    <version>2022.3389</version>
+    <version>2022.3405</version>
     <title>Agent Ransack</title>
     <authors>Mythicsoft</authors>
     <owners>seventypercent</owners>
@@ -16,14 +16,11 @@
     <copyright>Mythicsoft</copyright>
     <tags>admin</tags>
     <releaseNotes>
-* Bug fix: Hits not displaying with case-sensitive index NEAR search.
-* Bug fix: Contents view not sized correctly.
-* Bug fix: Expression editor was incorrectly concatenating values.
-* New: Edit history option in History settings.
-* Bug fix: Index settings changes were not being saved if monitoring active.
-* Bug fix: Long running index updates could fail with 'This IndexWriter is closed'.
-* Bug fix: Column widths and views were not restoring properly.
-* Bug fix: PDF/OCR issues when document paths included non-ASCII characters.
+* Added 'Last refresh' date to index list.
+* Text tab scrolls right to show more characters after a hit.
+* LastAccessedDate and CreatedDate added to .NET API.
+* Bug fix: Long path support for reading raw data from Office docs.
+* Bug fix: Lite mode report styles incorrectly shown as disabled.
 * Other minor changes/fixes.
     </releaseNotes>
   </metadata>
