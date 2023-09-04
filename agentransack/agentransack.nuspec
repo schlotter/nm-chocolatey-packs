@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>agentransack</id>
-    <version>2022.3405</version>
+    <version>2022.3406</version>
     <title>Agent Ransack</title>
     <authors>Mythicsoft</authors>
     <owners>seventypercent</owners>
@@ -16,12 +16,7 @@
     <copyright>Mythicsoft</copyright>
     <tags>admin</tags>
     <releaseNotes>
-* Added 'Last refresh' date to index list.
-* Text tab scrolls right to show more characters after a hit.
-* LastAccessedDate and CreatedDate added to .NET API.
-* Bug fix: Long path support for reading raw data from Office docs.
-* Bug fix: Lite mode report styles incorrectly shown as disabled.
-* Other minor changes/fixes.
+* Bug fix: Image preview sometimes not working with OneDrive.
     </releaseNotes>
   </metadata>
 </package>
