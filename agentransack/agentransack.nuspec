@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>agentransack</id>
-    <version>2022.3406</version>
+    <version>2022.3416</version>
     <title>Agent Ransack</title>
     <authors>Mythicsoft</authors>
     <owners>seventypercent</owners>
@@ -16,7 +16,12 @@
     <copyright>Mythicsoft</copyright>
     <tags>admin</tags>
     <releaseNotes>
-* Bug fix: Image preview sometimes not working with OneDrive.
+* New: DWG (CAD) file format support.
+* New: Word/PDF attachment searching.
+* Bug fix: Hits tab scrolling fix.
+* Bug fix: Crash when launching after Windows update.
+* Note: Windows 7 requires .NET 4.6 or higher for full functionality.
+* Other minor changes/fixes.
     </releaseNotes>
   </metadata>
 </package>
