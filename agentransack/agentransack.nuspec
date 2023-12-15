@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>agentransack</id>
-    <version>2022.3416</version>
+    <version>2022.3418</version>
     <title>Agent Ransack</title>
     <authors>Mythicsoft</authors>
     <owners>seventypercent</owners>
@@ -16,12 +16,9 @@
     <copyright>Mythicsoft</copyright>
     <tags>admin</tags>
     <releaseNotes>
-* New: DWG (CAD) file format support.
-* New: Word/PDF attachment searching.
-* Bug fix: Hits tab scrolling fix.
-* Bug fix: Crash when launching after Windows update.
-* Note: Windows 7 requires .NET 4.6 or higher for full functionality.
-* Other minor changes/fixes.
+* Root archive file (eg file.zip) now displays a list of contents in Text Tab.
+* Bug fix: Empty file warning was preventing file from appearing in result.
+* Revert (3416): Removed CET compatible setting due to issues with 3rd party modules.
     </releaseNotes>
   </metadata>
 </package>
