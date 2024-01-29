@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>agentransack</id>
-    <version>2022.3418</version>
+    <version>2022.3420</version>
     <title>Agent Ransack</title>
     <authors>Mythicsoft</authors>
     <owners>seventypercent</owners>
@@ -16,9 +16,11 @@
     <copyright>Mythicsoft</copyright>
     <tags>admin</tags>
     <releaseNotes>
-* Root archive file (eg file.zip) now displays a list of contents in Text Tab.
-* Bug fix: Empty file warning was preventing file from appearing in result.
-* Revert (3416): Removed CET compatible setting due to issues with 3rd party modules.
+* Improved List View scroll speed.
+* New policy DisableCrashReportSending to stop crash reports being sent to Mythicsoft.
+* Bug fix: Expression editor issue handling '\(' in regex.
+* Bug fix: Issue with Boolean expressions where only NOT specified.
+* Bug fix: Contents view out of sync with highlighted file when using TAB after rename.
     </releaseNotes>
   </metadata>
 </package>
