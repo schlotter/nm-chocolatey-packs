@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>agentransack</id>
-    <version>2022.3420</version>
+    <version>2022.3425</version>
     <title>Agent Ransack</title>
     <authors>Mythicsoft</authors>
     <owners>seventypercent</owners>
@@ -16,11 +16,10 @@
     <copyright>Mythicsoft</copyright>
     <tags>admin</tags>
     <releaseNotes>
-* Improved List View scroll speed.
-* New policy DisableCrashReportSending to stop crash reports being sent to Mythicsoft.
-* Bug fix: Expression editor issue handling '\(' in regex.
-* Bug fix: Issue with Boolean expressions where only NOT specified.
-* Bug fix: Contents view out of sync with highlighted file when using TAB after rename.
+* Bug fix: Indexing stuck in 'Analyzing' state when error occurs.
+* Bug fix: Anchored text in index search not highlighting correctly.
+* Bug fix: Zoomed text tab not displaying line numbers properly.
+* Other minor changes/fixes.
     </releaseNotes>
   </metadata>
 </package>
