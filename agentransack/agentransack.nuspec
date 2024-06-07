@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>agentransack</id>
-    <version>2022.3434</version>
+    <version>2022.3435</version>
     <title>Agent Ransack</title>
     <authors>Mythicsoft</authors>
     <owners>seventypercent</owners>
@@ -16,11 +16,7 @@
     <copyright>Mythicsoft</copyright>
     <tags>admin</tags>
     <releaseNotes>
-* New: .one (OneNote) file support.
-* Bug fix: Index update was incorrectly re-indexing unchanged files.
-* Bug fix: Owner column was not showing results for folders.
-* Bug fix: Index Manager - Last refresh column was not sorting properly.
-* Other minor changes/fixes.
+* Bug fix: Issue with file viewer causing application to close.
     </releaseNotes>
   </metadata>
 </package>

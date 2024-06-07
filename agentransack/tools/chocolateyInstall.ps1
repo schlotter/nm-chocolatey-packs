@@ -10,10 +10,10 @@ $ErrorActionPreference = 'Stop';
 
 $packageName= 'AgentRansack'
 $toolsDir   = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
-$url        = 'https://download.mythicsoft.com/flp/3434/agentransack_x86_msi_3434.zip'
-$url64      = 'https://download.mythicsoft.com/flp/3434/agentransack_x64_msi_3434.zip'
-$fileLocation = Join-Path $toolsDir 'agentransack_x86_3434.msi'
-$fileLocation64 = Join-Path $toolsDir 'agentransack_x64_3434.msi'
+$url        = 'https://download.mythicsoft.com/flp/3435/agentransack_x86_msi_3435.zip'
+$url64      = 'https://download.mythicsoft.com/flp/3435/agentransack_x64_msi_3435.zip'
+$fileLocation = Join-Path $toolsDir 'agentransack_x86_3435.msi'
+$fileLocation64 = Join-Path $toolsDir 'agentransack_x64_3435.msi'
 
 $packageArgs = @{
   packageName   = $packageName
@@ -28,9 +28,9 @@ $packageArgs = @{
   validExitCodes= @(0)
 
   softwareName  = 'AgentRansack'
-  checksum      = '6600e17684eecebd3af974fc761dcb15fc4bee47e7f80419ad52c0b61fa5f0a1'
+  checksum      = '4b160c0ee06e5d10ea4c31326eabae1b90a308509f52750db9c9d2986f66bd94'
   checksumType  = 'sha256'
-  checksum64    = '21ba767bc9c1b20360abca4e846f42a21056af082b49788abd28f1ecb3dfc5ea'
+  checksum64    = 'f288d43238ba323526e6fc6702f2e61afd1e7f8bcbee4f2bcee208817968a5f7'
   checksumType64= 'sha256'
 }
 
