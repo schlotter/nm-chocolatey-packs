@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>agentransack</id>
-    <version>2022.3499</version>
+    <version>2022.3502</version>
     <title>Agent Ransack</title>
     <authors>Mythicsoft</authors>
     <owners>seventypercent</owners>
@@ -16,15 +16,9 @@
     <copyright>Mythicsoft</copyright>
     <tags>admin</tags>
     <releaseNotes>
-* New: PDF Preview highlighting.
-* New: Normalize stylized quotes as regular quotes when searching.
-* Added command line flag to specify which archive types are active in index.
-* Option to customize tab title.
-* Bug fix: Improve index list loading speed.
-* Bug fix: Display issue fixed with large multi-folder lists.
-* Bug fix: Potential crash with complex multi-line regex searches.
+* Bug fix: Scripting issues after Windows 24H2 release.
+* Bug fix: No columns displayed if 'Remember window positions' OFF.
 * Other minor changes/fixes.
-* Bug fix: Using multi-folder button during index edit causes other fields to be reset.
     </releaseNotes>
   </metadata>
 </package>
