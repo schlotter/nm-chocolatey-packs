@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>agentransack</id>
-    <version>2022.3502</version>
+    <version>2022.3503</version>
     <title>Agent Ransack</title>
     <authors>Mythicsoft</authors>
     <owners>seventypercent</owners>
@@ -16,8 +16,8 @@
     <copyright>Mythicsoft</copyright>
     <tags>admin</tags>
     <releaseNotes>
-* Bug fix: Scripting issues after Windows 24H2 release.
-* Bug fix: No columns displayed if 'Remember window positions' OFF.
+* Bug fix: EPUB indexing/searching hit count incorrect.
+* Bug fix: NEAR term highlighting with PDF Preview not working.
 * Other minor changes/fixes.
     </releaseNotes>
   </metadata>
