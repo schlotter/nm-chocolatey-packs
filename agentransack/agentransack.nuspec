@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>agentransack</id>
-    <version>2022.3503</version>
+    <version>2022.3517</version>
     <title>Agent Ransack</title>
     <authors>Mythicsoft</authors>
     <owners>seventypercent</owners>
@@ -16,8 +16,13 @@
     <copyright>Mythicsoft</copyright>
     <tags>admin</tags>
     <releaseNotes>
-* Bug fix: EPUB indexing/searching hit count incorrect.
-* Bug fix: NEAR term highlighting with PDF Preview not working.
+* Improved Favorites list keyboard support.
+* Name column now displays leading spaces of file name if appropriate.
+* Support for Unix LF with MBOX files added.
+* New '-safe' switch for trouble-shooting start-up issues.
+* Bug fix: PDF Documents no longer locked for deletion when displayed in Preview tab.
+* Bug fix: Dragging from Explorer title bar into Look In field was causing issues with recent versions of Windows.
+* Bug fix: Clear history now deletes record of last search.
 * Other minor changes/fixes.
     </releaseNotes>
   </metadata>
