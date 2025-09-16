@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>agentransack</id>
-    <version>2022.3522</version>
+    <version>2022.3530</version>
     <title>Agent Ransack</title>
     <authors>Mythicsoft</authors>
     <owners>seventypercent</owners>
@@ -16,12 +16,12 @@
     <copyright>Mythicsoft</copyright>
     <tags>admin</tags>
     <releaseNotes>
-* Policies can now be stored in HKLM as well as HKCU.
-* Option for always-on safe mode - fixes issue with Explorer Patcher.
-* Bug fix: Microsoft Purview (Office365) generated PST files can now be searched properly.
-* Bug fix: Combobox truncation issue with long strings.
-* Bug fix: Copying Error list to clipboard issue.
-* Bug fix: .NET library issue with saving/loading criteria files.
+* Mythicsoft.Search.Core.Dll is now separate download (issues with A/V false positives).
+* Bug fix: Favorites not always loading correctly for index searches.
+* PDF Preview supports keyboard navigation.
+* Improved Contents View sizing logic.
+* Updated MSVC libs to latest version.
+* Bug fix: PDF temp files used for OCR not always deleted appropriately.
 * Other minor changes/fixes.
     </releaseNotes>
   </metadata>
