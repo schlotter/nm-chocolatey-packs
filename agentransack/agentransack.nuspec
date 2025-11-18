@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>agentransack</id>
-    <version>2022.3530</version>
+    <version>2022.3536</version>
     <title>Agent Ransack</title>
     <authors>Mythicsoft</authors>
     <owners>seventypercent</owners>
@@ -16,12 +16,9 @@
     <copyright>Mythicsoft</copyright>
     <tags>admin</tags>
     <releaseNotes>
-* Mythicsoft.Search.Core.Dll is now separate download (issues with A/V false positives).
-* Bug fix: Favorites not always loading correctly for index searches.
-* PDF Preview supports keyboard navigation.
-* Improved Contents View sizing logic.
-* Updated MSVC libs to latest version.
-* Bug fix: PDF temp files used for OCR not always deleted appropriately.
+* Bug fix: Possible crash when previewing some PDFs.
+* Bug fix: Paused searches not restarting properly with toolbar Start.
+* Bug fix: Improved dialog layout on high DPI screens.
 * Other minor changes/fixes.
     </releaseNotes>
   </metadata>
