@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>agentransack</id>
-    <version>2022.3536</version>
+    <version>2022.3544</version>
     <title>Agent Ransack</title>
     <authors>Mythicsoft</authors>
     <owners>seventypercent</owners>
@@ -16,9 +16,11 @@
     <copyright>Mythicsoft</copyright>
     <tags>admin</tags>
     <releaseNotes>
-* Bug fix: Possible crash when previewing some PDFs.
-* Bug fix: Paused searches not restarting properly with toolbar Start.
-* Bug fix: Improved dialog layout on high DPI screens.
+* Bug fix: File list was being hidden in some situations.
+* Bug fix: PDF Preview could crash with invalid PDFs.
+* Bug fix: Index monitor could fail if MyMusic folder not defined.
+* Bug fix: Temp files could be left if file conversion failed.
+* Bug fix: Term color dialog showing duplicate terms.
 * Other minor changes/fixes.
     </releaseNotes>
   </metadata>
