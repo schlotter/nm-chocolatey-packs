@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>agentransack</id>
-    <version>2022.3555</version>
+    <version>2022.3560</version>
     <title>Agent Ransack</title>
     <authors>Mythicsoft</authors>
     <owners>seventypercent</owners>
@@ -16,11 +16,9 @@
     <copyright>Mythicsoft</copyright>
     <tags>admin</tags>
     <releaseNotes>
-* Added policy management for index operations.
-* Bug fix: Favorites filter case-sensitive issues
-* Bug fix: Calendar appointments not displaying properly.
-* Bug fix: flpidx display issues with German localization.
-* Bug fix: Dark style text display improvements.
+* Improved handling of PDFs with lots of small images.
+* Bug fix: Hits tab scroll bar issues with index search.
+* Bug fix: Search term "&lt;" was freezing program.
 * Other minor changes/fixes.
     </releaseNotes>
   </metadata>
