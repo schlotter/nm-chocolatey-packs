@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>agentransack</id>
-    <version>2022.3560</version>
+    <version>2022.3562</version>
     <title>Agent Ransack</title>
     <authors>Mythicsoft</authors>
     <owners>seventypercent</owners>
@@ -16,10 +16,7 @@
     <copyright>Mythicsoft</copyright>
     <tags>admin</tags>
     <releaseNotes>
-* Improved handling of PDFs with lots of small images.
-* Bug fix: Hits tab scroll bar issues with index search.
-* Bug fix: Search term "&lt;" was freezing program.
-* Other minor changes/fixes.
+* Bug fix: OCR not working on some small PDF images.
     </releaseNotes>
   </metadata>
 </package>
